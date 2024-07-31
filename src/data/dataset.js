@@ -1,378 +1,421 @@
-export default [
+const petsData = [
+  // Perros
+  // Mascotas Abandonadas
   {
-    "id": "ada-lovelace",
-    "name": "Ada Lovelace",
-    "shortDescription": "Pionera en la programación, primera programadora de la historia.",
-    "description": "Una visionaria matemática británica del siglo XIX, es aclamada como la primera programadora de la historia. Su colaboración con Charles Babbage en la creación de la Máquina Analítica la llevó a desarrollar algoritmos, incluyendo el famoso \"algoritmo de Bernoulli\", destinados a ser procesados por una máquina. Su visión pionera la convirtió en una figura fundamental en la informática y la inteligencia artificial. Lovelace demostró que las computadoras podían ir más allá de simples cálculos matemáticos, anticipando un mundo donde la programación sería esencial en la resolución de problemas complejos, dejando una huella imborrable en la ciencia y la tecnología.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/ada-lovelace.jpg",
+    "id": "perro-abandonado-001",
+    "name": "Rex",
+    "shortDescription": "Perro grande y cariñoso abandonado.",
+    "description": "Rex es un perro de gran tamaño, con un pelaje marrón brillante. Fue abandonado en un parque local y ha estado esperando un nuevo hogar. A pesar de su triste pasado, es amigable y le encanta jugar con pelotas. Busca una familia que le ofrezca amor y compañía.",
+    "imageUrl": "https://example.com/images/rex.jpg",
     "facts": {
-      "yearOfBirth": "1815",
-      "yearOfDeath": "1852",
-      "birthPlace": "Londres, Reino Unido",
-      "mainField": "Ciencia de la Computación"
+      "age": "4 años",
+      "gender": "macho",
+      "breed": "Labrador",
+      "size": "grande",
+      "temperament": "amigable"
     },
     "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/genera-una-imagen-de-ada-lovelace2c-la-primera-prog/650a1eff8ff04b88833d5cdef0309441"
+      "curiosities": "Le encanta nadar en el agua."
     }
   },
   {
-    "id": "emmy-noether",
-    "name": "Emmy Noether",
-    "shortDescription": "Matemática destacada, teorema fundamental en álgebra abstracta.",
-    "description": "Una brillante matemática alemana, revolucionó la física teórica con sus contribuciones al teorema de conservación de la energía y el teorema de Noether, fundamentales en la teoría de la relatividad y la mecánica cuántica. A pesar de los obstáculos que enfrentó como mujer en la academia, sus investigaciones en álgebra abstracta y teoría de grupos son fundamentales en la física moderna. Su capacidad para unificar conceptos matemáticos y físicos marcó un hito en la historia de la ciencia, allanando el camino para futuras generaciones de científicas.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/emmy-noether.jpg",
+    "id": "perro-abandonado-002",
+    "name": "Samantha",
+    "shortDescription": "Perra pequeña, abandonada en la calle.",
+    "description": "Samantha es una perra pequeña, con un pelaje blanco y negro. La encontramos sola en una calle concurrida, y parece haber sido abandonada por su anterior dueño. Es muy dulce y le gusta estar cerca de las personas. Necesita un hogar que le brinde seguridad y afecto.",
+    "imageUrl": "https://example.com/images/samantha.jpg",
     "facts": {
-      "yearOfBirth": "1882",
-      "yearOfDeath": "1935",
-      "birthPlace": "Erlangen, Alemania",
-      "mainField": "Matemáticas"
+      "age": "2 años",
+      "gender": "hembra",
+      "breed": "Chihuahua",
+      "size": "pequeña",
+      "temperament": "dulce"
     },
     "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/create-an-image-of-of-a-german-woman2c-a-pioneering/6510ddb1e8254b928b8f8f1d5e95fea4"
+      "curiosities": "Es muy buena con los niños."
     }
   },
   {
-    "id": "hypatia-de-alejandria",
-    "name": "Hypatia de Alejandría",
-    "shortDescription": "Matemática y filósofa en la antigua Alejandría.",
-    "description": "Filósofa y matemática en la antigua Alejandría, desafió las normas de género de su época al destacar en una sociedad dominada por hombres. Su legado incluye importantes contribuciones a la geometría y la astronomía, así como su destacado papel como maestra y defensora del conocimiento en una época de agitación política. Hypatia demostró que las mujeres podían sobresalir en campos intelectuales y su valentía al mantener sus creencias filosóficas la convierte en un símbolo de resistencia y sabiduría en la historia de la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/hypatia-de-alejandria.jpg",
+    "id": "perro-abandonado-003",
+    "name": "Rocky",
+    "shortDescription": "Perro mediano abandonado en el refugio.",
+    "description": "Rocky es un perro mediano de pelaje gris que fue abandonado frente a un refugio. Es enérgico y muy leal. A pesar de haber pasado por momentos difíciles, sigue siendo amigable y disfruta de la compañía de las personas. Busca una familia que le dé una segunda oportunidad.",
+    "imageUrl": "https://example.com/images/rocky.jpg",
     "facts": {
-      "yearOfBirth": "circa 360",
-      "yearOfDeath": "415",
-      "birthPlace": "Alejandría, Egipto",
-      "mainField": "Matemáticas, Filosofía"
+      "age": "5 años",
+      "gender": "macho",
+      "breed": "Schnauzer",
+      "size": "mediano",
+      "temperament": "leal"
     },
     "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/create-a-vivid-digital-artwork-or-painting-that-de/6510df0ebe1a4807af22175452761e1a"
+      "curiosities": "Es muy protector con su familia."
     }
   },
   {
-    "id": "marjorie-lee-browne",
-    "name": "Marjorie Lee Browne",
-    "shortDescription": "Matemática, contribuyó a la teoría de números.",
-    "description": "Matemática estadounidense, destacó en una época en la que las mujeres afroamericanas enfrentaban múltiples barreras en la educación superior. No solo obtuvo su doctorado en matemáticas, sino que también se convirtió en una destacada educadora, promoviendo la diversidad en las ciencias matemáticas y desafiando la discriminación racial y de género. Su compromiso con la educación y su capacidad para inspirar a futuras generaciones la convierten en un modelo a seguir para las mujeres en la ciencia, dejando una huella perdurable en la historia académica.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/marjorie-lee-browne.jpg",
+    "id": "perro-abandonado-004",
+    "name": "Toby",
+    "shortDescription": "Perro mayor abandonado en la calle.",
+    "description": "Toby es un perro mayor con pelaje blanco. Fue encontrado en la calle, claramente abandonado. A pesar de su edad, Toby sigue siendo cariñoso y tranquilo. Ideal para una familia que busque un compañero leal en sus años dorados.",
+    "imageUrl": "https://example.com/images/toby.jpg",
     "facts": {
-      "yearOfBirth": "1914",
-      "yearOfDeath": "1979",
-      "birthPlace": "Memphis, Estados Unidos",
-      "mainField": "Matemáticas"
+      "age": "8 años",
+      "gender": "macho",
+      "breed": "Cocker Spaniel",
+      "size": "mediano",
+      "temperament": "tranquilo"
     },
     "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/design-an-inspiring-and-historically-accurate-imag/6510df7e7bb745f69d67f695441607a8"
+      "curiosities": "Le encanta recibir masajes."
+    }
+  },
+  // Mascotas Perdidas
+  {
+    "id": "perro-perdido-001",
+    "name": "Max",
+    "shortDescription": "Perro perdido en busca de su dueño.",
+    "description": "Max es un perro mediano con un pelaje dorado. Se perdió en un vecindario tranquilo y no ha encontrado a su dueño. Es muy enérgico y le gusta correr. Esperamos que su dueño lo encuentre pronto, pero mientras tanto, Max está buscando una nueva familia.",
+    "imageUrl": "https://example.com/images/max.jpg",
+    "facts": {
+      "age": "3 años",
+      "gender": "macho",
+      "breed": "Golden Retriever",
+      "size": "mediano",
+      "temperament": "activo"
+    },
+    "extraInfo": {
+      "curiosities": "Sabe hacer trucos básicos."
     }
   },
   {
-    "id": "shakuntala-devi",
-    "name": "Shakuntala Devi",
-    "shortDescription": "Matemática prodigio, conocida como la 'Calculadora Humana'.",
-    "description": "Conocida como \"la bruja de las matemáticas\" de la India, dejó una marca indeleble en el mundo de los números. Su capacidad mental asombrosa la llevó a resolver complejos cálculos matemáticos mentalmente en cuestión de segundos, estableciendo récords mundiales. Además de su talento innato, Devi promovió activamente la educación matemática y luchó por la igualdad de género en un país donde las mujeres enfrentaban desafíos en la ciencia y la educación. Su legado destaca el poder de la mente humana y la importancia de la igualdad de oportunidades en la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/shakuntala-devi.jpg",
+    "id": "perro-perdido-002",
+    "name": "Lola",
+    "shortDescription": "Perra extraviada esperando a su dueño.",
+    "description": "Lola es una perra de tamaño pequeño con un pelaje atigrado. Fue encontrada vagando sola por la ciudad. Es muy amistosa y le encanta recibir cariño. Aunque busca a su dueño, Lola también se adaptará a un nuevo hogar que le ofrezca amor y cuidados.",
+    "imageUrl": "https://example.com/images/lola.jpg",
     "facts": {
-      "yearOfBirth": "1929",
-      "yearOfDeath": "2013",
-      "birthPlace": "Bangalore, India",
-      "mainField": "Matemáticas"
+      "age": "1 año",
+      "gender": "hembra",
+      "breed": "Bulldog Francés",
+      "size": "pequeña",
+      "temperament": "amigable"
     },
     "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/indian-woman-writing-math-problems-in-a-blackbard-/6510e19f3db54e14b365b7e8dc5045f6"
+      "curiosities": "Disfruta de las siestas al sol."
     }
   },
   {
-    "id": "sofia-kovalevskaya",
-    "name": "Sofia Kovalevskaya",
-    "shortDescription": "Matemática y escritora, contribuyó a la teoría de funciones.",
-    "description": "Matemática rusa del siglo XIX, dejó una marca indeleble en la ciencia del siglo XIX al desafiar las barreras de género. Como matemática rusa, superó las restricciones sociales de su época para convertirse en la primera mujer en obtener un doctorado en matemáticas en Europa. Sus contribuciones a la teoría de las ecuaciones diferenciales y la mecánica revolucionaron la disciplina, abriendo nuevas perspectivas en el análisis matemático. Su destacada membresía en la Academia de Ciencias de Suecia marcó un hito en la historia de las mujeres en la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/sofia-kovalevskaya.jpg",
+    "id": "perro-perdido-003",
+    "name": "Charlie",
+    "shortDescription": "Perro grande perdido buscando a su dueño.",
+    "description": "Charlie es un perro grande y peludo que se perdió en el vecindario. Es muy amigable y juguetón. Esperamos que su dueño lo encuentre pronto, pero mientras tanto, Charlie está en busca de una familia temporal que le ofrezca cuidado y afecto.",
+    "imageUrl": "https://example.com/images/charlie.jpg",
     "facts": {
-      "yearOfBirth": "1850",
-      "yearOfDeath": "1891",
-      "birthPlace": "Moscú, Rusia",
-      "mainField": "Matemáticas"
+      "age": "4 años",
+      "gender": "macho",
+      "breed": "Husky",
+      "size": "grande",
+      "temperament": "juguetón"
     },
     "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/indian-woman-writing-math-problems-in-a-blackbard-/6510e19f3db54e14b365b7e8dc5045f6"
+      "curiosities": "Tiene un carácter muy enérgico."
     }
   },
   {
-    "id": "yoko-shimomura",
-    "name": "Yoko Shimomura",
-    "shortDescription": "Compositora de música, destacada en la industria de los videojuegos.",
-    "description": "Compositora japonesa, es una figura destacada en la ciencia de la música y el arte sonoro. Aunque no se dedica a la ciencia en el sentido tradicional, su trabajo en la composición musical ha requerido un profundo entendimiento de la teoría musical y la tecnología de audio. Ha contribuido de manera significativa a la industria de los videojuegos, componiendo icónicas bandas sonoras que han enriquecido la experiencia de juego. Su éxito en un campo donde las mujeres estaban subrepresentadas la convierte en un modelo a seguir, incluso en campos no convencionales como la composición musical.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/yoko-shimomura.jpg",
+    "id": "perro-perdido-004",
+    "name": "Molly",
+    "shortDescription": "Perra pequeña perdida esperando a su familia.",
+    "description": "Molly es una perra pequeña con un pelaje atigrado. Se perdió en un parque local y ha estado esperando a que su familia la recupere. Es muy amigable y le gusta estar cerca de las personas. Es ideal para un hogar que pueda ofrecerle seguridad y amor.",
+    "imageUrl": "https://example.com/images/molly.jpg",
     "facts": {
-      "yearOfBirth": "1967",
-      "birthPlace": "Hyogo, Japón",
-      "mainField": "Composición Musical, Video Juegos"
+      "age": "2 años",
+      "gender": "hembra",
+      "breed": "Yorkshire Terrier",
+      "size": "pequeña",
+      "temperament": "amigable"
     },
     "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/yoko-shimomura-making-music-for-a-video-game-in-19/6510e40dd1eb45d0906e8c1f4bb601d3"
+      "curiosities": "Sabe hacer trucos simples."
+    }
+  },
+  // Crías Recién Nacidas
+  {
+    "id": "perro-cria-001",
+    "name": "Buddy",
+    "shortDescription": "Cachorro juguetón en busca de hogar.",
+    "description": "Buddy es un cachorro adorable con pelaje negro y manchas blancas. Es muy juguetón y le encanta explorar. Aún está aprendiendo sobre la vida y necesita un hogar que pueda enseñarle y proporcionarle el cuidado adecuado para crecer sano y feliz.",
+    "imageUrl": "https://example.com/images/buddy.jpg",
+    "facts": {
+      "age": "2 meses",
+      "gender": "macho",
+      "breed": "Beagle",
+      "size": "pequeño",
+      "temperament": "curioso"
+    },
+    "extraInfo": {
+      "curiosities": "Es muy sociable con otros perros."
     }
   },
   {
-    "id": "maryam-mirzakhani",
-    "name": "Maryam Mirzakhani",
-    "shortDescription": "Matemática, ganadora del Premio Fields.",
-    "description": "Matemática iraní, hizo historia al convertirse en la primera mujer en ganar la Medalla Fields, el premio más prestigioso en matemáticas. Sus investigaciones en la geometría de superficies y la teoría de las superficies de Riemann han tenido un impacto duradero en la matemática pura. A lo largo de su carrera, Mirzakhani inspiró a muchas mujeres a perseguir carreras en ciencia y matemáticas, derribando las barreras de género. Su enfoque innovador y su capacidad para resolver problemas complejos la convierten en un modelo a seguir para la comunidad científica y en un símbolo de la excelencia matemática.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/maryam-mirzakhani.jpg",
+    "id": "perro-cria-002",
+    "name": "Bella",
+    "shortDescription": "Cachorra dulce buscando una familia.",
+    "description": "Bella es una cachorra de pelaje marrón claro, muy tierna y cariñosa. Fue rescatada de una situación de abandono y está lista para encontrar una familia que la quiera. Es juguetona y se lleva bien con otros animales. Ideal para cualquier hogar que le ofrezca amor y cuidado.",
+    "imageUrl": "https://example.com/images/bella.jpg",
     "facts": {
-      "yearOfBirth": "1977",
-      "yearOfDeath": "2017",
-      "birthPlace": "Teherán, Irán",
-      "mainField": "Matemáticas"
+      "age": "3 meses",
+      "gender": "hembra",
+      "breed": "Poodle",
+      "size": "pequeña",
+      "temperament": "dulce"
     },
     "extraInfo": {
-      "imageSource": "https://chalkdustmagazine.com/features/mathematics-maryam-mirzakhani/"
+      "curiosities": "Le gusta jugar con peluches."
     }
   },
   {
-    "id": "adele-goldberg",
-    "name": "Adele Goldberg",
-    "shortDescription": "Informática pionera, co-creadora del lenguaje de programación Smalltalk.",
-    "description": "Informática estadounidense reconocida por su influyente trabajo en la investigación y desarrollo de la programación orientada a objetos. Su contribución más destacada es la creación del lenguaje de programación Smalltalk, que revolucionó la forma en que se desarrollan software y sistemas informáticos. Goldberg ha sido una defensora incansable de la usabilidad y la accesibilidad en la informática, asegurando que las aplicaciones informáticas sean más amigables para los usuarios. Su trabajo ha allanado el camino para una programación más intuitiva y eficiente, y su legado perdura en la industria de la tecnología.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/adele-goldberg.jpg",
+    "id": "perro-cria-003",
+    "name": "Daisy",
+    "shortDescription": "Cachorra enérgica y juguetona.",
+    "description": "Daisy es una cachorra con pelaje blanco y manchas negras. Es muy activa y le encanta jugar con otros cachorros. Está buscando un hogar que pueda proporcionarle la atención y el entrenamiento que necesita para crecer sana y feliz.",
+    "imageUrl": "https://example.com/images/daisy.jpg",
     "facts": {
-      "yearOfBirth": "1945",
-      "birthPlace": "Chicago, Estados Unidos",
-      "mainField": "Ciencias de la Computación"
+      "age": "2 meses",
+      "gender": "hembra",
+      "breed": "Dálmata",
+      "size": "pequeña",
+      "temperament": "enérgica"
     },
     "extraInfo": {
-      "imageSource": "https://pionerasinformaticas.ujaen.es/en/computer-women-pioneers/adele-goldberg-en"
+      "curiosities": "Le encanta correr por el jardín."
     }
   },
   {
-    "id": "barbara-liskov",
-    "name": "Barbara Liskov",
-    "shortDescription": "Científica de la computación, pionera en programación orientada a objetos.",
-    "description": "Pionera de la informática, es conocida por su trabajo en la programación y la arquitectura de sistemas distribuidos. Fue la primera mujer en obtener un doctorado en ciencias de la computación en el Instituto de Tecnología de Stanford y desarrolló el lenguaje de programación CLU, que estableció fundamentos para la programación orientada a objetos. Liskov ha dejado una marca indeleble en la industria de la tecnología al liderar avances en sistemas de almacenamiento y seguridad informática. Su enfoque en la fiabilidad y la robustez ha influido en el diseño de sistemas críticos en todo el mundo.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/barbara-liskov.jpg",
+    "id": "perro-cria-004",
+    "name": "Oscar",
+    "shortDescription": "Cachorro alegre y lleno de vida.",
+    "description": "Oscar es un cachorro pequeño con un pelaje negro y manchas blancas. Es muy alegre y le encanta jugar. Ideal para una familia que pueda dedicar tiempo a su entrenamiento y socialización para que crezca equilibrado y feliz.",
+    "imageUrl": "https://example.com/images/oscar.jpg",
     "facts": {
-      "yearOfBirth": "1939",
-      "birthPlace": "Los Angeles, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+      "age": "3 meses",
+      "gender": "macho",
+      "breed": "Jack Russell Terrier",
+      "size": "pequeño",
+      "temperament": "alegre"
     },
     "extraInfo": {
-      "imageSource": "https://medium.com/a-computer-of-ones-own/barbara-liskov-inventor-of-abstract-data-types-9f8908fdcf86"
+      "curiosities": "Es muy activo y le gusta correr."
+    }
+  },
+  
+  // Gatos
+  // Mascotas Abandonadas
+  {
+    "id": "gato-abandonado-001",
+    "name": "Whiskers",
+    "shortDescription": "Gato adulto abandonado en el jardín.",
+    "description": "Whiskers es un gato adulto con un pelaje gris y ojos verdes. Fue encontrado abandonado en el jardín de una casa. Es muy independiente pero también busca cariño. Está esperando un hogar donde pueda ser amado y cuidado adecuadamente.",
+    "imageUrl": "https://example.com/images/whiskers.jpg",
+    "facts": {
+      "age": "5 años",
+      "gender": "macho",
+      "breed": "American Shorthair",
+      "size": "mediano",
+      "temperament": "independiente"
+    },
+    "extraInfo": {
+      "curiosities": "Le gusta observar por la ventana."
     }
   },
   {
-    "id": "grace-hopper",
-    "name": "Grace Hopper",
-    "shortDescription": "Científica de la computación, creadora del primer compilador.",
-    "description": "Una de las pioneras de la informática, es famosa por su contribución al desarrollo del primer compilador y al lenguaje de programación COBOL. Además, desafió los estereotipos de género en la década de 1940 al unirse a la Marina de los Estados Unidos y convertirse en la primera programadora de la computadora Harvard Mark I. Su legado abarca la creación de conceptos cruciales como la \"depuración de software\" y su influencia en el desarrollo de la informática moderna, estableciendo estándares para la programación de alto nivel y la innovación tecnológica.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/grace-hopper.jpg",
+    "id": "gato-abandonado-002",
+    "name": "Luna",
+    "shortDescription": "Gata de pelaje negro, abandonada en el parque.",
+    "description": "Luna es una gata de pelaje negro con ojos dorados que fue abandonada en un parque. Es muy cariñosa y busca un hogar donde pueda recibir amor. Se lleva bien con otros animales y es muy tranquila. Ideal para un ambiente hogareño y acogedor.",
+    "imageUrl": "https://example.com/images/luna.jpg",
     "facts": {
-      "yearOfBirth": "1906",
-      "yearOfDeath": "1992",
-      "birthPlace": "Nueva York, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+      "age": "4 años",
+      "gender": "hembra",
+      "breed": "Siamés",
+      "size": "mediano",
+      "temperament": "tranquila"
     },
     "extraInfo": {
-      "imageSource": "https://photos.com/featured/grace-hopper-with-early-computer-bettmann.html"
+      "curiosities": "Tiene un pelaje muy suave."
     }
   },
   {
-    "id": "margaret-hamilton",
-    "name": "Margaret Hamilton",
-    "shortDescription": "Científica de la computación, lideró desarrollo de software para Apollo 11.",
-    "description": "Destacada científica de la computación que desempeñó un papel fundamental en el programa Apollo de la NASA. Fue directora de la División de Ingeniería de Software en el Laboratorio de Instrumentación del MIT, donde desarrolló el concepto de \"ingeniería de software\". Su liderazgo en el desarrollo del software de vuelo para las misiones Apollo fue fundamental para el éxito de la llegada del hombre a la Luna. Hamilton es un ejemplo de cómo la tecnología y la ciencia pueden alcanzar logros extraordinarios cuando se combinan con un enfoque innovador y una visión audaz.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/margaret-hamilton.jpg",
+    "id": "gato-abandonado-003",
+    "name": "Oliver",
+    "shortDescription": "Gato adulto rescatado de la calle.",
+    "description": "Oliver es un gato adulto con un pelaje atigrado. Fue rescatado de la calle y ha estado esperando en el refugio por un nuevo hogar. Es muy cariñoso y le gusta estar cerca de las personas. Busca una familia que le brinde amor y atención.",
+    "imageUrl": "https://example.com/images/oliver.jpg",
     "facts": {
-      "yearOfBirth": "1936",
-      "birthPlace": "Paoli, Indiana, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+      "age": "6 años",
+      "gender": "macho",
+      "breed": "Maine Coon",
+      "size": "grande",
+      "temperament": "cariñoso"
     },
     "extraInfo": {
-      "imageSource": "https://odetta.ai/blogs/margaret-hamilton-the-first-software-engineer"
+      "curiosities": "Le encanta jugar con cintas."
     }
   },
   {
-    "id": "radia-perlman",
-    "name": "Radia Perlman",
-    "shortDescription": "Ingeniera de redes, inventora del algoritmo Spanning Tree.",
-    "description": "Científica de la computación estadounidense, ha dejado una marca indeleble en el mundo de las redes informáticas y la seguridad. Conocida como \"la madre de Internet\", su invención del algoritmo Spanning Tree Protocol (STP) revolucionó la conectividad de redes y sentó las bases para la infraestructura de Internet moderna. A pesar de operar en un campo dominado por hombres, Perlman ha demostrado que las mujeres pueden liderar avances tecnológicos vitales. Su compromiso con la resiliencia de las redes y la ciberseguridad ha influido en la estabilidad y confiabilidad de la comunicación en línea.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/radia-perlman.jpg",
+    "id": "gato-abandonado-004",
+    "name": "Bella",
+    "shortDescription": "Gata rescatada de un contenedor de basura.",
+    "description": "Bella es una gata con pelaje blanco y ojos azules, rescatada de un contenedor de basura. Es muy dulce y se adapta bien a nuevos entornos. Busca un hogar donde pueda sentirse segura y querida.",
+    "imageUrl": "https://example.com/images/bella-gato.jpg",
     "facts": {
-      "yearOfBirth": "1951",
-      "birthPlace": "Portsmouth, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+      "age": "3 años",
+      "gender": "hembra",
+      "breed": "Persa",
+      "size": "mediano",
+      "temperament": "dulce"
     },
     "extraInfo": {
-      "imageSource": "https://hackaday.com/2018/05/29/spanning-the-tree-dr-radia-perlman-untangling-networks/"
+      "curiosities": "Es muy buena para acurrucarse."
+    }
+  },
+  // Mascotas Perdidas
+  {
+    "id": "gato-perdido-001",
+    "name": "Mittens",
+    "shortDescription": "Gato perdido en busca de su dueño.",
+    "description": "Mittens es un gato perdido con pelaje gris claro y manchas blancas. Se perdió en un vecindario tranquilo y ha estado esperando a que su dueño lo encuentre. Es muy amigable y le gusta estar cerca de las personas.",
+    "imageUrl": "https://example.com/images/mittens.jpg",
+    "facts": {
+      "age": "2 años",
+      "gender": "macho",
+      "breed": "British Shorthair",
+      "size": "mediano",
+      "temperament": "amigable"
+    },
+    "extraInfo": {
+      "curiosities": "Sabe abrir puertas con su pata."
     }
   },
   {
-    "id": "shafi-goldwasser",
-    "name": "Shafi Goldwasser",
-    "shortDescription": "Científica de la computación, ganadora del Premio Turing.",
-    "description": "Es una destacada criptógrafa y científica de la computación que ha contribuido significativamente a la teoría de la computación y la seguridad de la información. Su trabajo en criptografía de probabilidad y complejidad computacional ha sentado las bases para la seguridad en línea y la privacidad de datos en un mundo cada vez más digitalizado. Goldwasser es un ejemplo de cómo la ciencia de la computación puede abordar desafíos contemporáneos y proteger la información en la era de la información.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/shafi-goldwasser.jpg",
+    "id": "gato-perdido-002",
+    "name": "Tigger",
+    "shortDescription": "Gato perdido en busca de su familia.",
+    "description": "Tigger es un gato atigrado que se perdió en un parque local. Es muy juguetón y le encanta interactuar con las personas. Aunque busca a su familia, también está abierto a encontrar un nuevo hogar donde pueda recibir amor y cuidados.",
+    "imageUrl": "https://example.com/images/tigger.jpg",
     "facts": {
-      "yearOfBirth": "1958",
-      "birthPlace": "Nueva York, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+      "age": "3 años",
+      "gender": "macho",
+      "breed": "Abyssinian",
+      "size": "mediano",
+      "temperament": "juguetón"
     },
     "extraInfo": {
-      "imageSource": "https://www.jahresbericht2019.unibe.ch/successes_2019/einstein_lectures/index_eng.html"
+      "curiosities": "Le encanta trepar árboles."
     }
   },
   {
-    "id": "chien-shiung-wu",
-    "name": "Chien-Shiung Wu",
-    "shortDescription": "Física experimental, contribuyó a la física nuclear.",
-    "description": "Física experimental de origen chino, desafiando los prejuicios de género y nacionalidad, realizó experimentos fundamentales en física de partículas y contribuyó significativamente a la comprensión de la desintegración beta. Su famoso experimento \"Wu\" refutó la paridad en la física de partículas, lo que cambió la forma en que los científicos comprenden las fuerzas fundamentales de la naturaleza. Wu demostró que el talento y la perseverancia pueden superar cualquier barrera, y su legado sigue siendo un faro de inspiración para científicas en todo el mundo.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/chien-shiung-wu.jpg",
+    "id": "gato-perdido-003",
+    "name": "Cleo",
+    "shortDescription": "Gata pequeña perdida esperando a su dueño.",
+    "description": "Cleo es una gata pequeña con pelaje gris y ojos verdes. Se perdió en un área residencial y está esperando a que su dueño la recupere. Es muy cariñosa y se lleva bien con otros animales. Ideal para una familia que pueda ofrecerle cariño y cuidados.",
+    "imageUrl": "https://example.com/images/cleo.jpg",
     "facts": {
-      "yearOfBirth": "1912",
-      "yearOfDeath": "1997",
-      "birthPlace": "Liuhe, Taicang, China",
-      "mainField": "Física"
+      "age": "1 año",
+      "gender": "hembra",
+      "breed": "Sphynx",
+      "size": "pequeña",
+      "temperament": "cariñosa"
     },
     "extraInfo": {
-      "imageSource": "https://www.thoughtco.com/chien-shiung-wu-biography-3530366"
+      "curiosities": "Le gusta dormir en lugares cálidos."
     }
   },
   {
-    "id": "hedy-lamarr",
-    "name": "Hedy Lamarr",
-    "shortDescription": "Actriz e inventora, contribuyó al desarrollo de la tecnología de espectro ensanchado.",
-    "description": "Actriz austroamericana y científica, fue una mente brillante en la intersección de la tecnología y el entretenimiento. Junto con el compositor George Antheil, inventó un sistema de comunicación secreta durante la Segunda Guerra Mundial que sentó las bases para la tecnología de espectro ensanchado y la comunicación inalámbrica moderna. Lamarr demostró que las mujeres pueden destacar tanto en el cine como en la ciencia, y su legado como inventora ha sido fundamental para el desarrollo de la tecnología de comunicación inalámbrica que usamos en la actualidad.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/hedy-lamarr.jpg",
+    "id": "gato-perdido-004",
+    "name": "Felix",
+    "shortDescription": "Gato perdido busca a su familia.",
+    "description": "Felix es un gato con pelaje blanco y negro que se perdió en un vecindario ocupado. Es muy sociable y busca a su familia. Mientras tanto, Felix se adapta bien a nuevos entornos y está buscando un hogar temporal que le ofrezca amor y seguridad.",
+    "imageUrl": "https://example.com/images/felix.jpg",
     "facts": {
-      "yearOfBirth": "1914",
-      "yearOfDeath": "2000",
-      "birthPlace": "Viena, Austria",
-      "mainField": "Actuación, Física"
+      "age": "4 años",
+      "gender": "macho",
+      "breed": "Scottish Fold",
+      "size": "mediano",
+      "temperament": "sociable"
     },
     "extraInfo": {
-      "imageSource": "https://www.sparkfun.com/news/6147"
+      "curiosities": "Es muy bueno con los niños."
+    }
+  },
+  // Crías Recién Nacidas
+  {
+    "id": "gato-cria-001",
+    "name": "Kitty",
+    "shortDescription": "Cachorra de gato juguetona en adopción.",
+    "description": "Kitty es una cría de gato con pelaje blanco y negro. Es muy juguetona y curiosa. Busca un hogar donde pueda recibir la atención y el amor necesarios para crecer sana y feliz. Ideal para una familia que pueda dedicar tiempo a su socialización y cuidado.",
+    "imageUrl": "https://example.com/images/kitty.jpg",
+    "facts": {
+      "age": "2 meses",
+      "gender": "hembra",
+      "breed": "Siamés",
+      "size": "pequeña",
+      "temperament": "curiosa"
+    },
+    "extraInfo": {
+      "curiosities": "Le gusta jugar con hilos y pelotas."
     }
   },
   {
-    "id": "maria-goeppert-mayer",
-    "name": "Maria Goeppert Mayer",
-    "shortDescription": "Física teórica, ganadora del Premio Nobel de Física.",
-    "description": "Física teórica alemana-estadounidense, dejó una profunda huella en la física nuclear y la mecánica cuántica. Fue la segunda mujer en recibir el Premio Nobel de Física y su trabajo pionero en la estructura de capas nucleares revolucionó nuestra comprensión de los núcleos atómicos. A pesar de las barreras de género en la academia, su dedicación y talento la llevaron a contribuir significativamente a la teoría nuclear, abriendo el camino para futuras investigadoras en un campo dominado por hombres. Maria Goeppert Mayer es un ejemplo inspirador de excelencia científica y perseverancia en la búsqueda del conocimiento.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/maria-goeppert-mayer.jpg",
+    "id": "gato-cria-002",
+    "name": "Nala",
+    "shortDescription": "Cachorra de gato en busca de una familia.",
+    "description": "Nala es una cachorra con pelaje atigrado y ojos brillantes. Es muy dulce y se lleva bien con otros gatos. Busca un hogar que pueda ofrecerle cariño y cuidados mientras crece. Es ideal para familias con tiempo para dedicarle a su socialización.",
+    "imageUrl": "https://example.com/images/nala.jpg",
     "facts": {
-      "yearOfBirth": "1906",
-      "yearOfDeath": "1972",
-      "birthPlace": "Kattowitz, Alemania",
-      "mainField": "Física"
+      "age": "3 meses",
+      "gender": "hembra",
+      "breed": "Maine Coon",
+      "size": "pequeña",
+      "temperament": "dulce"
     },
     "extraInfo": {
-      "imageSource": "https://www.wsemexhibit.org/maria-goeppert-mayer.html"
+      "curiosities": "Le gusta explorar nuevos lugares."
     }
   },
   {
-    "id": "lise-meitner",
-    "name": "Lise Meitner",
-    "shortDescription": "Física nuclear, contribuyó a la teoría de la fisión nuclear.",
-    "description": "Física austriaca-sueca, dejó un legado imborrable en la física nuclear y la radioquímica. A pesar de enfrentar obstáculos de género en una era dominada por hombres, colaboró con Otto Hahn en el descubrimiento de la fisión nuclear, un avance revolucionario. Aunque no compartió el Premio Nobel por este logro, su contribución fue crucial para comprender la energía nuclear y la física de partículas. Su determinación y pasión por la ciencia han inspirado a generaciones de científicas. Lise Meitner es un símbolo perdurable de la perseverancia femenina y el impacto duradero que las mujeres pueden tener en la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/lise-meitner.jpg",
+    "id": "gato-cria-003",
+    "name": "Simba",
+    "shortDescription": "Cachorro de gato juguetón y activo.",
+    "description": "Simba es un cachorro de gato con pelaje dorado y ojos azules. Es muy activo y le encanta jugar con otros gatos. Está buscando un hogar que pueda ofrecerle atención y cariño mientras crece. Ideal para familias que buscan un compañero juguetón.",
+    "imageUrl": "https://example.com/images/simba.jpg",
     "facts": {
-      "yearOfBirth": "1878",
-      "yearOfDeath": "1968",
-      "birthPlace": "Viena, Austria",
-      "mainField": "Física"
+      "age": "2 meses",
+      "gender": "macho",
+      "breed": "Bengalí",
+      "size": "pequeño",
+      "temperament": "activo"
     },
     "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/lise-meitner-in-nuclear-physics-lab-in-19502c-retro/651196e6bbcb4009950e9955c2199760"
+      "curiosities": "Es muy rápido y ágil."
     }
   },
   {
-    "id": "sau-lan-wu",
-    "name": "Sau Lan Wu",
-    "shortDescription": "Física de partículas, contribuyó a experimentos clave en física de alta energía.",
-    "description": "Física experimental sinoamericana, ha sido una fuerza motriz en la física de partículas. Destacó en experimentos en el CERN y lideró investigaciones cruciales, como el descubrimiento del quark c, que expandieron nuestro entendimiento de la estructura fundamental de la materia. Wu superó desafíos en una disciplina dominada por hombres y ha sido un faro de inspiración para científicas de todo el mundo. Sau Lan Wu es un ejemplo de excelencia científica y de cómo las mujeres pueden dejar huella en la investigación de vanguardia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/sau-lan-wu.jpg",
+    "id": "gato-cria-004",
+    "name": "Leo",
+    "shortDescription": "Cachorro de gato enérgico y juguetón.",
+    "description": "Leo es un cachorro de gato con pelaje gris claro y manchas oscuras. Es muy enérgico y le encanta jugar. Está buscando un hogar donde pueda recibir el amor y cuidado que necesita para crecer sano y feliz.",
+    "imageUrl": "https://example.com/images/leo.jpg",
     "facts": {
-      "yearOfBirth": "1940",
-      "birthPlace": "Hong Kong, China",
-      "mainField": "Física de Partículas"
+      "age": "3 meses",
+      "gender": "macho",
+      "breed": "Sphynx",
+      "size": "pequeño",
+      "temperament": "enérgico"
     },
     "extraInfo": {
-      "imageSource": "https://repository.aip.org/islandora/object/nbla%3A315195"
-    }
-  },
-  {
-    "id": "jocelyn-bell-burnell",
-    "name": "Jocelyn Bell Burnell",
-    "shortDescription": "Astrónoma y astrofísica, co-descubridora de los púlsares.",
-    "description": "Astrofísica británica, es una figura extraordinaria en la ciencia. Durante su doctorado, hizo un descubrimiento revolucionario al detectar los primeros púlsares, estrellas de neutrones altamente magnetizadas que emiten pulsos regulares de radiación. A pesar de que su asesor recibió el Premio Nobel por este descubrimiento, Bell Burnell se ha convertido en un símbolo de perseverancia y contribución de las mujeres a la astronomía. Su carrera distinguida y su activismo en favor de la diversidad de género en la ciencia han inspirado a generaciones futuras de científicas. Jocelyn Bell Burnell es un ejemplo de valentía y excelencia científica.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/jocelyn-bell-burnell.jpg",
-    "facts": {
-      "yearOfBirth": "1943",
-      "birthPlace": "Belfast, Reino Unido",
-      "mainField": "Astronomía, Astrofísica"
-    },
-    "extraInfo": {
-      "imageSource": "https://womeninscienceweadmire.icfo.eu/wiswa-2/jocelyn-bell/"
-    }
-  },
-  {
-    "id": "dorothy-crowfoot-hodgkin",
-    "name": "Dorothy Crowfoot Hodgkin",
-    "shortDescription": "Química, ganadora del Premio Nobel de Química.",
-    "description": "Química británica, es una figura icónica en la ciencia que superó las barreras de género de su época. Su trabajo revolucionario en la cristalografía de rayos X permitió determinar la estructura de importantes biomoléculas, como la penicilina, la vitamina B12 y la insulina. Fue galardonada con el Premio Nobel de Química en 1964, siendo la tercera mujer en recibir este prestigioso reconocimiento. Hodgkin no solo fue una científica excepcional, sino también una defensora de la igualdad de género en la ciencia, allanando el camino para futuras generaciones de científicas y dejando un legado duradero en la investigación y la equidad.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/dorothy-crowfoot-hodgkin.jpg",
-    "facts": {
-      "yearOfBirth": "1910",
-      "yearOfDeath": "1994",
-      "birthPlace": "El Cairo, Egipto / Shipston-on-Stour, Reino Unido",
-      "mainField": "Química"
-    },
-    "extraInfo": {
-      "imageSource": "https://www.some.ox.ac.uk/news/jan-royall-why-we-must-champion-dorothy-hodgkin-for-the-50-note/"
-    }
-  },
-  {
-    "id": "marie-curie",
-    "name": "Marie Curie",
-    "shortDescription": "Física y química, ganadora de dos Premios Nobel.",
-    "description": "física y química de origen polaco y nacionalizada francesa, es una de las figuras más icónicas en la historia de la ciencia. Ganadora de dos premios Nobel (Física en 1903 y Química en 1911), Curie realizó investigaciones fundamentales sobre la radiactividad y el descubrimiento de los elementos radio y polonio. Su dedicación y valentía en la investigación científica, a pesar de los desafíos de la discriminación de género y los riesgos de la radiación, la convierten en un modelo a seguir para científicas de todo el mundo.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/marie-curie.jpg",
-    "facts": {
-      "yearOfBirth": "1867",
-      "yearOfDeath": "1934",
-      "birthPlace": "Varsovia, Polonia",
-      "mainField": "Física y Química"
-    },
-    "extraInfo": {
-      "imageSource": "https://www.historyextra.com/period/first-world-war/life-of-the-week-marie-curie/"
-    }
-  },
-  {
-    "id": "marjory-stephenson",
-    "name": "Marjory Stephenson",
-    "shortDescription": "Microbióloga y bioquímica, investigó en enzimología.",
-    "description": "Bioquímica británica, brilló como científica en una época en la que las mujeres enfrentaban obstáculos muy significativos en la investigación científica. Su trabajo pionero en microbiología, enzimología y bioquímica contribuyó al entendimiento de procesos fundamentales en la vida. Fue una de las primeras mujeres en ser elegida miembro de la Royal Society, un reconocimiento a su destacada contribución a la ciencia. Además, fue una mentora y defensora de las mujeres en la ciencia, inspirando y allanando el camino para futuras generaciones.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/marjory-stephenson.jpg",
-    "facts": {
-      "yearOfBirth": "1885",
-      "yearOfDeath": "1948",
-      "birthPlace": "Londres, Reino Unido",
-      "mainField": "Química, Microbiología, Bioquímica"
-    },
-    "extraInfo": {
-      "imageSource": "https://microbiologysociety.org/grants-prizes/all-prizes-and-competitions-/prize-lectures/marjory-stephenson-prize-lecture/marjory-stephenson-a-short-history.html"
-    }
-  },
-  {
-    "id": "rosalind-franklin",
-    "name": "Rosalind Franklin",
-    "shortDescription": "Química y cristalógrafa, contribuyó a la comprensión de la estructura del ADN.",
-    "description": "Química y cristalógrafa británica, destacó en un campo dominado por hombres y su contribución a la ciencia es innegable. Sus investigaciones pioneras en la cristalografía de rayos X fueron fundamentales para revelar la estructura del ADN en forma de doble hélice, un hito crucial en la biología molecular. A pesar de que su trabajo inicial fue subestimado, su determinación y habilidad científica allanaron el camino para futuros avances en genética y biología. Franklin es un ejemplo inspirador de cómo las mujeres pueden sobresalir en la ciencia, dejando un legado duradero en la investigación y la igualdad de género.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/rosalind-franklin.jpg",
-    "facts": {
-      "yearOfBirth": "1920",
-      "yearOfDeath": "1958",
-      "birthPlace": "Londres, Reino Unido",
-      "mainField": "Química, Cristalografía"
-    },
-    "extraInfo": {
-      "imageSource": ""
+      "curiosities": "Le gusta trepar y explorar."
     }
   }
 ];
+
+export default petsData;
