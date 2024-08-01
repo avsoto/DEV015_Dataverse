@@ -5,11 +5,15 @@
     <title>Dataverse</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   </head>
+  
   <body>
     <header>
-      <div id="sidebar" class="sidebar">
+
+<!--Mobile Sidebar-->
+
+      <aside id="sidebar" class="sidebar">
           <ul>
               <div class="btn-close" >
                   <li><i class="fa-solid fa-xmark"></i></li>
@@ -19,19 +23,20 @@
               <li>Regístrate</li>
               <li>Ubícanos</li>
               <li class="li-sidebar-donations">Dona aquí</li>
-
           </ul>
 
-      </div>
+      </aside>
 
-      <nav class="navbar">
-          <div class="toggle-btn">
+<!--Desktop Nabar-->
+
+      <nav>
+          <div class="menu-btn">
               <i class="fa-solid fa-bars"></i>
           </div>
           <ul>
-              <li><img src="Logo.svg"></li>
+              <li><img src="/src/assets/Logo.svg"></li>
           </ul>
-          <ul class="links-info">
+          <ul class="navbar-options">
             <li>Inicio</li>
             <li>Nosotros</li>
             <li>Regístrate</li>
@@ -39,7 +44,6 @@
             <li class="li-donations">Dona aquí</li>
           </ul>
       </nav>
-
 
   </header>
     <script src="main.js" type="module"></script>

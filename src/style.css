@@ -3,41 +3,45 @@
   }
   
   body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Josefin Sans';
   }
   
   
-  /* NAVEGITATION BAR*/
-  nav{
+  /* Desktop Navbar */
+
+  nav {
     width: 100%;
     height: 100px;
     max-width: 100%;
+    background-color: #ED8A0A;
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    position: fixed;
-    background-color: orange;
-    top: 0;
-    left: 0;
   }
   
   li {
     list-style: none;
   }
   
-  .links-info{
+  .navbar-options {
     list-style-type: none;
     margin: 0em;
     padding: 0;
     display: flex;
     gap: 2rem;
     align-items: center;
-    color: white
+    color: white;
+    font-size: 1.7em;
   }
-  
+
   img{
     width: 8em;
   }
+
+  /* Botón Navbar Dona aquí */
   
   .li-donations{
     background-color: white;
@@ -47,27 +51,33 @@
     padding-right: 1.5em;
     padding-bottom: 0.7em;
     color:#000;
+    font-family: 'Josefin Sans';
   }
   
-  /* SIDEBAR STYLES */
+  /* Mobile Sidebar btn */
   
-  .navbar .toggle-btn{
+  .navbar .menu-btn {
     font-size: 0.9rem;
     cursor: pointer;
     display: none;
-    color:white;
+    color: #ffffff;
   }
   
+  /* Ocultar Sidebar */
+
   #sidebar {
+    width: 300px; /* Definido un ancho fijo para la sidebar */
+    height: 100%;
     position: absolute;
     background: #f8f8f8;
     left: -300px;
     transition: left 0.4s ease;
     z-index: 20;
-    width: 300px; /* Definido un ancho fijo para la sidebar */
-    height: 100%;
+    
   }
   
+  /* Activar Sidebar */
+
   #sidebar.active {
     position: fixed;
     left: 0;
@@ -81,6 +91,8 @@
     font-size: 100%;
     font-weight: 400;
     margin: 10%;
+
+    
   }
   
   #sidebar .fa-xmark {
@@ -90,7 +102,7 @@
     cursor: pointer;
   }
   
-  /* RESPONSIVE DESIGN */
+  /* Responsive Design */
   
   @media (min-width: 992px) {
     .sidebar {
@@ -99,7 +111,7 @@
   }
   
   @media (max-width: 992px) {
-    .links-info {
+    .navbar-options {
         display: none;
         gap: 0;
     }
@@ -109,7 +121,7 @@
         justify-content: baseline;
     }
   
-    .navbar .toggle-btn {
+    .navbar .menu-btn {
         display: block;
     }
   }
