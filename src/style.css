@@ -11,14 +11,6 @@ body{
 
 /* Desktop Navbar */
 
-
-body{
-  font-family: 'Josefin Sans';
-  margin: 0;
-}
-
-/* Desktop Navbar */
-
 nav {
   width: 100%;
   height: 70px;
@@ -39,39 +31,6 @@ nav ul {
 li {
   list-style: none;
 }
-
-
-.navbar-options {
-  list-style-type: none;
-  margin: 30px;  
-  padding: 0;
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  color: #ffffff;
-  font-size: 1.7m;
-}
-nav {
-  width: 100%;
-  height: 70px;
-  max-width: 100%;
-  background-color: #ED8A0A;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-nav ul {
-  display: flex;
-  gap: 20px; 
-  padding: 0;
-  margin: 30px;
-}
-
-li {
-  list-style: none;
-}
-
 
 .navbar-options {
   list-style-type: none;
@@ -108,42 +67,7 @@ li {
 }
 
 /* Ocultar Sidebar */
-/* Botón Navbar Dona aquí */
 
-.li-donations{
-  background-color: #ffffff;
-  border-radius: 2em;
-  padding-top: 0.4em;
-  padding-left: 1.1em;
-  padding-right: 1.1em;
-  padding-bottom: 0.4em;
-  color:#000000;
-  text-align: center;
-  font-family: 'Josefin Sans';
-}
-
-/* Mobile Sidebar btn */
-
-.menu-btn {
-  font-size: 1.8rem;
-  cursor: pointer;
-  display: none;
-  color: #ffffff;
-}
-
-/* Ocultar Sidebar */
-
-#sidebar {
-  width: 300px; /* Definido un ancho fijo para la sidebar */
-  height: 100%;
-  position: absolute;
-  background: #ffffff;
-  left: -300px;
-  transition: left 0.4s ease;
-  z-index: 20;  
-}
-
-/* Activar Sidebar */
 #sidebar {
   width: 300px; /* Definido un ancho fijo para la sidebar */
   height: 100%;
@@ -244,7 +168,6 @@ li {
 
 }
 
-
 .texto p {
     margin-left: 380px;
     font-size: 1.5em;
@@ -298,7 +221,7 @@ li {
   }
 }
 
-/* Desktop Banner */
+/* Mobile Banner */
 
 @media (max-width: 992px) {
 
