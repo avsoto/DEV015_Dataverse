@@ -10,8 +10,7 @@ body{
 }
 
 /* Desktop Navbar */
-  margin: 0;
-}
+
 
 body{
   font-family: 'Josefin Sans';
@@ -185,7 +184,7 @@ li {
   cursor: pointer;
 }
 
-/* Banner */
+/* Desktop Banner */
   
 .banner {
     width: 100%;
@@ -197,7 +196,7 @@ li {
 }
 
 .izquierda {
-    width: 40%;
+    width: 30%;
     height: 400px;
     display: flex;
     justify-content: space-around;
@@ -205,25 +204,25 @@ li {
 }
 
 .derecha {
-    width: 40%;
+    width: 70%;
     height: 400px;
     text-align: right;
-    margin-right: 20%;
+    margin-right: 10%;
     margin-bottom: 100px;
     z-index: 20;
 }
 
 .derecha h1 {
     font-family: "Cherry Bomb One", system-ui;
-    font-size: 6em;
-    margin: 0;
+    font-size: 6.5em;
+    margin-bottom: 0.5em;
     color: #0A5C1B;
-    line-height: 95px;
+    line-height: 100px;
 }
 
 .vector {
     position: absolute;
-    width: 50%;
+    width: 40%;
     height: 590px;
     margin-top: -95px;
     margin-right: 20px;
@@ -240,13 +239,15 @@ li {
 .texto h3, .texto p {
     font-family: "Josefin Sans", sans-serif;
     color: #272523;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.9em;
+    font-size: 1.5em;
+
 }
 
 
 .texto p {
-    margin-left: 250px;
+    margin-left: 380px;
+    font-size: 1.5em;
 }
 
 #conocelos-btn {
@@ -297,10 +298,13 @@ li {
   }
 }
 
-/* Desktop Navbar */
+/* Desktop Banner */
 
 @media (max-width: 992px) {
+
   .banner{
+    width: 100%;
+    height: 1000px;
     background-color: #7BE950;
     display: flex;
     flex-direction: column; /*ponerlo en columna*/
@@ -309,54 +313,67 @@ li {
 }
 
   .izquierda{
-      width: 60%;
-      height: 700px;
+      width: 40%;
+      height: 500px;
       display: flex;
-      justify-content: space-around;
-      margin-top: 5em;
-  }
-
-  .derecha{
-      width: 50%;
-      height: 700px;
-      text-align: center;
-      z-index: 19;
-  }
-
-  .derecha h1{
-      font-family: "Cherry Bomb One", system-ui;
-      font-size: 8em;
-      margin: 0;
-      color: #0A5C1B;
-      line-height: 80px;
-      margin-bottom: 4rem;
-      font-weight: 400;
+      justify-content: center;
+      margin-top: 8rem;
   }
 
   .vector{
-      position: absolute;
-      margin-right: 20px;
-  }
+    position: absolute;
+    margin-right: 20px;
+    width: 70%;
+    height: 400px;
+    margin-top: -80px;
+    margin-right: 100px;
+}
 
   .img-banner{
       z-index: 19;
+      width: 100%;
+      height: 270px;
+      margin-top: -20px;
+      margin-right: 80px;
+  }
+
+  .derecha{
+      width: 60%;
+      height: 500px;
+      text-align: center;
+      z-index: 19;
+      margin-left: 3.8em;
+      margin-top: 120px;
+  }
+
+  .texto {
+    text-align: center;
+}
+
+  .texto h1{
+      font-family: "Cherry Bomb One", system-ui;
+      font-size: 4.3em;
+      font-weight: 400;
+      color: #0A5C1B;
+      line-height: 80px;
+      margin-bottom: 3.5rem;
   }
 
   .texto h3, .texto p{
       font-family: "Josefin Sans", sans-serif;
       color: #272523;
+      margin-bottom: 0.9em;
+      font-size: 1.5em;
   }
 
   .texto p{
-      margin-bottom: 2em;
-      font-size: xx-large;
+      margin-bottom: 0.9em;
+      margin-left: 0px;
+      font-size: 1.5em;
   }
 
   .texto h3{
-      margin-top: 0.5em;
-      margin-top: 1em;
-      margin-bottom: 0.5em;
-      font-size: xx-large;
+      margin-bottom: 0.9em;
   }
 
   .boton-conocelos{
