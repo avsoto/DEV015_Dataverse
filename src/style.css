@@ -624,6 +624,65 @@ select[name='elegir'] {
 
 /* Tarjetas contenido */
 
+  .mascotas-tarjetas {
+    width: auto;
+  }
+  
+  .nuestras-mascotas {
+    width: auto;
+    font-family: "Cherry Bomb One";
+    font-size: 3.5em;
+    font-weight: 400;
+    margin-top: 1.2em;
+    margin-bottom: 1.4em;
+    color: #4C1271;
+    line-height: 60px;
+    text-align: center;
+  }
+  
+  .huesos1{
+    width: auto;
+    text-align: center;
+    margin-left: 180px;
+    margin-top: -200px;
+  }
+  
+  .huesos2{
+    width: auto;
+    text-align: center;
+    margin-left: 180px;
+  }
+  
+  .img-hueso1 {
+    width: 30%;
+    transform: scaleX(-1);
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .img-hueso2 {
+    width: 30%;
+    position: absolute;
+  }
+  
+  .img-hueso3 {
+    width: 30%;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .img-hueso4 {
+    width: 30%;
+    transform: scaleX(-1);
+    position: absolute;
+  }
+  
+  #root {
+    margin-top: 240px;
+  }
+  
   .tarjeta-img {
     width: 100%; 
     height: auto; 
