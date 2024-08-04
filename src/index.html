@@ -52,7 +52,7 @@
       </nav>
   </header>
 
-  <!-- Desktop Banner -->
+<!-- Desktop Banner -->
 
   <main>
     <section class="banner">
@@ -63,7 +63,7 @@
       <div class="derecha">
           <div class="texto">
               <h1>Adopta una mascota</h1>
-              <h3>Dales un hogar feliz</h3>
+              <h2>Dales un hogar feliz</h2>
               <p>Estos pequeños seres de luz están esperando por ti para llenar tus días de pura felicidad.</p>
               <button id="conocelos-btn">Conócelos</button>
           </div>
@@ -73,6 +73,156 @@
     <section>
 
     </section>
+<!-- Desktop Tarjetas -->
+
+    <section class="mascotas-container">
+
+      <div class="mascotas-barra">
+        <ul class="opciones-mascota">
+          <li><i class="fa-solid fa-bars" id="bars-2"></i>Filtros</li>
+          <label>Ordenar por:
+            <select name="ordenar"></i>
+              <option value="asc" selected></i>A-Z</option>
+              <option value="desc">Z-A</option>
+            </select>
+          </label>
+          <li>
+            <button id="btn-limpiar">Limpiar</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mascotas-filtros">
+        <label>
+          <select name="elegir"></i>
+            <option value="asc" selected></i>Tipo</option>
+            <option value="asc"></i>Perro</option>
+            <option value="desc">Gato</option>
+        </label>
+          </select>
+        <label>
+          <select name="elegir"></i>
+            <option value="asc" selected></i>Edad</option>
+            <option value="asc"></i>Cachorro</option>
+            <option value="desc">Adulto</option>
+            <option value="desc">Mayor</option>
+          </select>
+        </label>
+          <label>
+          <select name="elegir"></i>
+            <option value="asc" selected></i>Género</option>
+            <option value="asc" selected></i>Macho</option>
+            <option value="desc">Hembra</option>
+          </select>
+          </label>
+          <label>
+          <select name="elegir"></i>
+            <option value="asc" selected></i>Tamaño</option>
+            <option value="asc" selected></i>Pequeño</option>
+            <option value="desc">Mediano</option>
+            <option value="desc">Grande</option>
+          </select>
+          </label>
+      </div>
+      <section class="mascotas-tarjetas">
+        <h2 class="nuestras-mascotas">Nuestras <br> mascotas</h2>
+        <div class="huesos1"><img class="img-hueso1" src="./assets//hueso.png">
+        <img class="img-hueso2" src="./assets//hueso.png">
+        </div>
+        <div id="root">
+          <ul>
+            <li itemscope itemtype="NuestrasMascotas" class="tarjeta">
+                <div class="tarjeta-contenido">
+                <img class="tarjeta-img" src="https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%201.jpeg?alt=media&token=0aa405af-4449-48f1-95dc-f3326dd5325f" alt="Rex">
+                <dt>Nombre:</dt><dd itemprop="name">Rex</dd>
+                <dt>Descripción:</dt><dd itemprop="shortDescription"></dd>
+                <dt>Edad:</dt><dd itemprop="age">4 años</dd>
+                <dt>Gender</dt><dd itemprop="gender">Macho</dd>
+                <dt>Raza:</dt><dd itemprop="breed">Labrador Retriever</dd>
+                <dt>Tamaño:</dt><dd itemprop="size">Grande</dd>
+                <dt>Comportamiento:</dt><dd itemprop="temperament">Enérgico</dd>
+                  </div>
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+          </ul>
+        </div>
+        <div class="huesos2">
+        <img class="img-hueso3" src="./assets//hueso.png">
+        <img class="img-hueso4" src="./assets//hueso.png">
+        </div>
+
+      </section>
+
+    </section>
+
   </main>
     <script src="main.js" type="module"></script>
   </body>
