@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   </head>
-  
+
   <body>
     <header>
 
@@ -68,15 +68,18 @@
               <button id="conocelos-btn">Conócelos</button>
           </div>
       </div>
-    </section>  
+    </section>
 
+    <section>
+
+    </section>
 <!-- Desktop Tarjetas -->
 
     <section class="mascotas-container">
 
       <div class="mascotas-barra">
         <ul class="opciones-mascota">
-          <li><i class="fa-solid fa-bars" id="bars-2"></i>Filtros</li>
+          <li class="boton-filtros"><i class="fa-solid fa-bars" id="bars-2"></i>Filtros</li>
           <label>Ordenar por:
             <select name="ordenar"></i>
               <option value="asc" selected></i>A-Z</option>
@@ -122,93 +125,69 @@
           </label>
       </div>
       <section class="mascotas-tarjetas">
-        <h2 class="nuestras-mascotas">Nuestras <br> mascotas</h2>
-        <div class="huesos1"><img class="img-hueso1" src="./assets//hueso.png">
-        <img class="img-hueso2" src="./assets//hueso.png">
+        <h2 class="nuestras-mascotas">
+          <span class="titulo-principal">Nuestras</span><br>
+          <span class="titulo-secundario">mascotas</span>
+        </h2>
+        <div class="huesos1">
+          <img class="img-hueso1" src="./assets//hueso.png">
+          <img class="img-hueso2" src="./assets//hueso.png">
         </div>
         <div id="root">
-          <ul>
-            <li itemscope itemtype="NuestrasMascotas" class="tarjeta">
+          <ul class="ul-tarjeta">
+             <li>
+              <dl itemscope itemtype="NuestrasMascotas" class="tarjeta">
                 <div class="tarjeta-contenido">
-                <img class="tarjeta-img" src="https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%201.jpeg?alt=media&token=0aa405af-4449-48f1-95dc-f3326dd5325f" alt="Rex">
-                <dt>Nombre:</dt><dd itemprop="name">Rex</dd>
-                <dt>Descripción:</dt><dd itemprop="shortDescription"></dd>
-                <dt>Edad:</dt><dd itemprop="age">4 años</dd>
-                <dt>Gender</dt><dd itemprop="gender">Macho</dd>
-                <dt>Raza:</dt><dd itemprop="breed">Labrador Retriever</dd>
-                <dt>Tamaño:</dt><dd itemprop="size">Grande</dd>
-                <dt>Comportamiento:</dt><dd itemprop="temperament">Enérgico</dd>
-                  </div>
+                    <img class="tarjeta-img" src="https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%201.jpeg?alt=media&token=0aa405af-4449-48f1-95dc-f3326dd5325f" alt="Rex">
+                    <dt></dt><dd itemprop="name">REX</dd>
+                    <dt></dt><dd itemprop="shortDescription">Es súper cariñoso y te seguirá a todos lados</dd>
+                    <dt>Edad:</dt><dd itemprop="age">4 años</dd>
+                    <dt>Gender</dt><dd itemprop="gender">Macho</dd>
+                    <dt>Raza:</dt><dd itemprop="breed">Labrador Retriever</dd>
+                    <dt>Tamaño:</dt><dd itemprop="size">Grande</dd>
+                    <dt>Comportamiento:</dt><dd itemprop="temperament">Enérgico</dd>
+                </div>
+              </dl>
+            </li>
+           <!-- <li>
+              <dl itemscope itemtype="NuestrasMascotas" class="tarjeta">
+                <div class="tarjeta-contenido">
+                    <img class="tarjeta-img" src="https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%201.jpeg?alt=media&token=0aa405af-4449-48f1-95dc-f3326dd5325f" alt="Rex">
+                    <dt></dt><dd itemprop="name">REX</dd>
+                    <dt></dt><dd itemprop="shortDescription">Es súper cariñoso y te seguirá a todos lados</dd>
+                    <dt>Edad:</dt><dd itemprop="age">4 años</dd>
+                    <dt>Gender</dt><dd itemprop="gender">Macho</dd>
+                    <dt>Raza:</dt><dd itemprop="breed">Labrador Retriever</dd>
+                    <dt>Tamaño:</dt><dd itemprop="size">Grande</dd>
+                    <dt>Comportamiento:</dt><dd itemprop="temperament">Enérgico</dd>
+                </div>
             </li>
             <li>
-
+              <dl itemscope itemtype="NuestrasMascotas" class="tarjeta">
+                <div class="tarjeta-contenido">
+                    <img class="tarjeta-img" src="https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%201.jpeg?alt=media&token=0aa405af-4449-48f1-95dc-f3326dd5325f" alt="Rex">
+                    <dt></dt><dd itemprop="name">REX</dd>
+                    <dt></dt><dd itemprop="shortDescription">Es súper cariñoso y te seguirá a todos lados</dd>
+                    <dt>Edad:</dt><dd itemprop="age">4 años</dd>
+                    <dt>Gender</dt><dd itemprop="gender">Macho</dd>
+                    <dt>Raza:</dt><dd itemprop="breed">Labrador Retriever</dd>
+                    <dt>Tamaño:</dt><dd itemprop="size">Grande</dd>
+                    <dt>Comportamiento:</dt><dd itemprop="temperament">Enérgico</dd>
+                </div>
             </li>
             <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
+              <dl itemscope itemtype="NuestrasMascotas" class="tarjeta">
+                <div class="tarjeta-contenido">
+                    <img class="tarjeta-img" src="https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%201.jpeg?alt=media&token=0aa405af-4449-48f1-95dc-f3326dd5325f" alt="Rex">
+                    <dt></dt><dd itemprop="name">REX</dd>
+                    <dt></dt><dd itemprop="shortDescription">Es súper cariñoso y te seguirá a todos lados</dd>
+                    <dt>Edad:</dt><dd itemprop="age">4 años</dd>
+                    <dt>Gender</dt><dd itemprop="gender">Macho</dd>
+                    <dt>Raza:</dt><dd itemprop="breed">Labrador Retriever</dd>
+                    <dt>Tamaño:</dt><dd itemprop="size">Grande</dd>
+                    <dt>Comportamiento:</dt><dd itemprop="temperament">Enérgico</dd>
+                </div>
+            </li>-->
           </ul>
         </div>
         <div class="huesos2">
@@ -221,6 +200,27 @@
     </section>
 
   </main>
+  <footer class="footer">
+    <div class="colum">
+      <a href="#">HOME</a>
+      <a href="#">ABOUT</a>
+      <a href="#">SIGN UP</a>
+      <a href="#">CONTACT US</a>
+    </div>
+    <div class="center-colum">
+      <h3>Salva una vida</h3>
+      <img src="/src/assets/Logo.svg">
+      <a class="name">JASMIN VIDAL - ANA SOTO 2024</a>
+    </div>
+    <div class="colum">
+      <div class="icon">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+
+  </footer>
     <script src="main.js" type="module"></script>
   </body>
 </html>

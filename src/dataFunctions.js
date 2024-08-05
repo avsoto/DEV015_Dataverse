@@ -1,9 +1,21 @@
-// Estas funciones son ejemplos, aquí puedes desarrollar tus propias funciones.
+/*Manipulación de datos*/
+import petsData from './data/dataset.js';
 
-export const example = () => {
-  return 'example';
-};
+const dataFunctions = {
 
-export const anotherExample = () => {
-  return [];
-};
+
+  showDogs: (text) => {
+
+    if(Array.isArray(petsData)){
+      for(let i=0; i<petsData.length;i++){
+        return petsData;
+      }
+    }
+      else{
+        return [];
+      }
+    }
+
+}
+
+export default dataFunctions;
