@@ -21,12 +21,12 @@ body{
   .navbar-options {
     display: none;
     gap: 0;
-  } /*verificar si se puede borrar */
+  } 
 }
 
 nav {
   width: 100%;
-  height: 70px;
+  height: 50px;
   max-width: 100%;
   background-color: #ED8A0A;
   display: flex;
@@ -51,12 +51,12 @@ li {
   font-size: 1.8rem;
   cursor: pointer;
   color: #ffffff;
-  margin: 20px;  
+  margin: 20px;
 }
 
 /* Ocultar Sidebar */
 
-#sidebar {
+.sidebar {
   width: 300px; /* Definido un ancho fijo para la sidebar */
   height: 100%;
   position: absolute;
@@ -68,7 +68,7 @@ li {
 
 /* Activar Sidebar */
 
-#sidebar.active {
+.sidebar.active {
   position: fixed;
   left: 0;
   width: 40%;
@@ -142,7 +142,7 @@ li {
     text-align: center;
     z-index: 19;
     margin-left: 3em;
-    margin-top: -270px;
+    margin-top: -180px;
 }
 
 .texto {
@@ -197,7 +197,7 @@ li {
 .mascotas-container {
   width: 100%;
   height: auto;
-  padding-bottom: 10em;
+  padding-bottom: 20em;
   background-color: #C08AF3;
   box-shadow: rgba(0, 0, 0, 0.25);
 }
@@ -217,7 +217,6 @@ li {
   justify-content: space-around;
   gap: 1rem;
   align-items: center;
-  margin: 0px;
 }
 
 .opciones-mascota li, .opciones-mascota label{
@@ -282,6 +281,7 @@ select[name='elegir'] {
   color:#ffffff;
   text-align: center;
   font-family: 'Josefin Sans';
+  font-size: 1.3em;  
 }
 
 .mascotas-filtros {
@@ -324,14 +324,15 @@ select[name='elegir'] {
 .huesos1{
   width: auto;
   text-align: center;
-  margin-left: 180px;
+  margin-left: 130px;
   margin-top: -200px;
 }
 
 .huesos2{
   width: auto;
   text-align: center;
-  margin-left: 180px;
+  margin-left: 130px;
+  margin-top: -150px;
 }
 
 .img-hueso1 {
@@ -363,6 +364,7 @@ select[name='elegir'] {
 
 /* Tarjetas contenido */
 
+
 #root {
   margin-top: 210px;
 }
@@ -370,13 +372,13 @@ select[name='elegir'] {
 #root .ul-tarjeta{
   display: flex;
   justify-content: space-evenly;
-  margin-left: 0;
   padding-inline-start: 0;
   flex-wrap: wrap;
   }
 
 #root li{
-  margin-top: 3em;
+  margin-top: 2em;
+  z-index: 1500;
 }
 
 .tarjeta {
@@ -387,7 +389,7 @@ select[name='elegir'] {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.412);
   background-color: #ffffffe7;
-  max-width: 300px;
+  max-width: 350px;
 }
 
 .tarjeta-img {
@@ -399,13 +401,14 @@ select[name='elegir'] {
 }
 
 .tarjeta-contenido {
-    padding: 20px;
-    font-size: 1.5em;
+    padding: 10px;
+    font-size: 1.3em;
     margin: 0 0 16px;
     color: #1e1e1e;
+    text-align: left;
 }
 
-dd[itemprop="name"] {
+li[itemprop="name"] {
   margin-top: 1em;
   margin-bottom: 1em;
   margin-left: 3em;
@@ -414,12 +417,12 @@ dd[itemprop="name"] {
   padding: 1em;
   text-align: center;
   background-color: #8457A0;
-  ;
 }
 
 /* Footer */
 
 footer{
+  z-index: 550;
   background: #FFB700;
   height: 300px;
   display: flex;
@@ -433,6 +436,7 @@ footer .column {
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5em;
+  z-index: 50;
 }
 
 footer .center-column {
@@ -477,11 +481,16 @@ footer h3{
 }
 
 /* --------------------- Desktop Design ------------------------- */
-*{
-  margin: 0;
+
+dd {
+  margin-inline-start: 40px;
 }
 
 @media (min-width: 992px) {
+
+  *{
+    margin: 0;
+  }
 
   body{
   font-family: 'Josefin Sans';
@@ -492,7 +501,7 @@ footer h3{
 
 nav ul {
   display: flex;
-  gap: 20px; 
+  gap: 20px;
   padding: 0;
   margin: 30px;
 }
@@ -503,7 +512,7 @@ li {
 
 .navbar-options {
   list-style-type: none;
-  margin: 30px;  
+  margin: 30px;
   padding: 0;
   display: flex;
   gap: 2rem;
@@ -526,7 +535,7 @@ li {
   font-family: 'Josefin Sans';
 }
 
-/* Mobile Sidebar btn */
+/* Desktop Sidebar btn */
 
 .menu-btn {
   font-size: 1.8rem;
@@ -544,7 +553,7 @@ li {
   background: #ffffff;
   left: -300px;
   transition: left 0.4s ease;
-  z-index: 20;  
+  z-index: 20;
 }
 
 /* Activar Sidebar */
@@ -562,7 +571,7 @@ li {
   color: #222222;
   font-size: 100%;
   font-weight: 400;
-  margin: 10%;  
+  margin: 10%;
 }
 
 #sidebar ul {
@@ -578,14 +587,15 @@ li {
 }
 
 /* Desktop Banner */
-  
+
 .banner {
     width: 100%;
-    height: 530px;
+    height: 470px;
     background-color: #7BE950;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-direction: row;
 }
 
 .izquierda {
@@ -601,48 +611,50 @@ li {
     height: 400px;
     text-align: right;
     margin-right: 10%;
-    margin-bottom: -20px;
-    z-index: 20;
+    margin-top: 20px;
+    z-index: 20; 
 }
 
 .derecha h1 {
     font-family: "Cherry Bomb One", system-ui;
-    font-size: 5em;
+    font-size: 4.7em;
     font-weight: 400;
     margin-bottom: 0.5em;
     color: #0A5C1B;
-    line-height: 80px;
+    line-height: 70px;
 }
 
 .vector {
     position: absolute;
     width: auto;
-    height: 500px;
-    margin-top: -48px;
+    height: 440px;
+    margin-top: -85px;
     margin-right: 20px;
 }
 
 .img-banner {
     z-index: 19;
     width: auto;
-    height: 350px;
+    height: 320px;
     margin-right: -30px;
-    margin-top: 15px;
+    margin-top: -30px;
 }
 
 .texto {
-  vertical-align: middle;
+  vertical-align: center;
+  text-align: right;
 }
 
 .texto h2, .texto p {
     font-family: "Josefin Sans", sans-serif;
     color: #272523;
     margin-bottom: 1.2em;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 .texto p {
-    margin-left: 300px;
+  margin-left: 80px;
+  font-size: 1.1em;
 }
 
 #conocelos-btn {
@@ -659,13 +671,13 @@ li {
   font-family: "Josefin Sans", sans-serif;
 }
 
-/* Mobile Filtros y Tarjetas */
+/* Desktop Filtros y Tarjetas */
 
 /* Filtros */
 
 .mascotas-container {
   width: 100%;
-  height: 1300px;
+  padding-bottom: 20em;
   background-color: #C08AF3;
   box-shadow: rgba(0, 0, 0, 0.25);
 }
@@ -675,16 +687,18 @@ li {
   height: 60px;
   gap: 1rem;
   background-color: #F0D8FF;
+  font-size: 0.8em;
 }
 
 .opciones-mascota {
   width: auto;
-  padding: 0;
+  padding: 0px;
   height: 60px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 1rem;
   align-items: center;
+  margin: 0 8px 0 8px;
 }
 
 #bars-2 {
@@ -718,7 +732,7 @@ select[name='ordenar'] {
   font-family: 'Josefin Sans';
 }
 
-#btn-limpiar::placeholder {
+#btn-limpiar:hover {
   cursor: pointer;
   background-color: #ffffff;
   border-radius: 2em;
@@ -732,11 +746,26 @@ select[name='ordenar'] {
   font-family: 'Josefin Sans';
 }
 
+select[name='elegir'] {
+  background-color: #5C2E80;
+  border-radius: 2em;
+  border: none;
+  padding-top: 0.4em;
+  padding-left: 1.1em;
+  padding-right: 1.1em;
+  padding-bottom: 0.4em;
+  color:#ffffff;
+  text-align: center;
+  font-family: 'Josefin Sans';
+  font-size: 1.1em;  
+}
+
 .mascotas-filtros {
   width: auto;
   margin: 40px;
   text-align: center;
-  display: none;
+  display: flex;
+  justify-content: center;
 }
 
 .mascotas-filtros.active {
@@ -760,6 +789,12 @@ select[name='elegir'] {
 
 /* Tarjetas */
 
+#root{
+  margin-top: 0px;
+}
+
+/* Tarjetas contenido */
+
 .mascotas-tarjetas {
   width: auto;
 }
@@ -778,13 +813,13 @@ select[name='elegir'] {
 
 .huesos1{
   text-align: center;
-  margin-left: 180px;
+  margin-left: 120px;
   margin-top: -200px;
 }
 
 .huesos2{
   text-align: center;
-  margin-left: 180px;
+  margin-left: 120px;
 }
 
 .img-hueso1 {
@@ -810,36 +845,45 @@ select[name='elegir'] {
 }
 
 #root {
-  margin-top: 240px;
+  margin-top: 210px;
+}
+
+#root .ul-tarjeta{
+  display: flex;
+  justify-content: space-evenly;
+  padding-inline-start: 0;
+  flex-wrap: wrap;
+  }
+
+#root li{
+  margin-top: 2em;
+  z-index: 1500;
 }
 
 .tarjeta {
+  display: flex;
   width: auto;
-  height: 500px;
-  position: absolute;
-  border: none; 
-  border-radius: 8px; 
-  overflow: hidden; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.412); 
-  background-color: #ffffffc2; 
-  max-width: 300px; 
-  margin: 20px; 
-  z-index: 15;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px rgba(34, 34, 34, 0.03);
+  background-color: #ffffffe7;
+  max-width: 350px;
 }
 
-/* Tarjetas contenido */
-
 .tarjeta-img {
-  width: 100%; 
-  height: auto; 
-  display: block; 
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .tarjeta-contenido {
-  padding: 20px; 
-  font-size: 1em; 
-  margin: 0 0 16px; 
-  color: #1e1e1e; 
+  padding: 20px;
+  font-size: 1.5em;
+  margin: 0 0 16px;
+  color: #1e1e1e;
 }
 
 }
