@@ -1,7 +1,9 @@
-  /* --------------------- Desktop Design ------------------------- */
+ /* --------------------- Mobile Design ------------------------- */
 
-*{
-  margin: 0;
+/* Mobile Navbar */
+
+* {
+  margin: 0px;
 }
 
 body{
@@ -9,7 +11,18 @@ body{
   margin: 0;
 }
 
-/* Desktop Navbar */
+@media (min-width: 992px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-options {
+    display: none;
+    gap: 0;
+  } /*verificar si se puede borrar */
+}
 
 nav {
   width: 100%;
@@ -25,36 +38,11 @@ nav ul {
   display: flex;
   gap: 20px;
   padding: 0;
-  margin: 30px;
+  margin: 20px;
 }
 
 li {
   list-style: none;
-}
-
-.navbar-options {
-  list-style-type: none;
-  margin: 30px;
-  padding: 0;
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  color: #ffffff;
-  font-size: 1.7m;
-}
-
-/* Botón Navbar Dona aquí */
-
-.li-donations{
-  background-color: #ffffff;
-  border-radius: 2em;
-  padding-top: 0.4em;
-  padding-left: 1.1em;
-  padding-right: 1.1em;
-  padding-bottom: 0.4em;
-  color:#000000;
-  text-align: center;
-  font-family: 'Josefin Sans';
 }
 
 /* Mobile Sidebar btn */
@@ -62,8 +50,8 @@ li {
 .menu-btn {
   font-size: 1.8rem;
   cursor: pointer;
-  display: none;
   color: #ffffff;
+  margin: 20px;  
 }
 
 /* Ocultar Sidebar */
@@ -108,11 +96,492 @@ li {
   cursor: pointer;
 }
 
-/* Desktop Banner */
+/* Mobile Banner */
 
 .banner {
+  width: 100%;
+  height: 1000px;
+  background-color: #7BE950;
+  display: flex;
+  flex-direction: column; /*ponerlo en columna*/
+  justify-content: space-around;
+  align-items: center;
+}
+
+.izquierda {
+    width: 70%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+    margin-left: 6.5em;
+    text-align: center;
+    z-index: 19;
+}
+
+.vector {
+  position: absolute;
+  margin-right: 20px;
+  width: 80%;
+  height: 400px;
+  margin-top: -90px;
+  margin-right: 105px;
+}
+
+.img-banner {
+    z-index: 19;
+    width: auto;
+    height: 250px;
+    margin-right: 90px;
+    margin-top: -5px;
+}
+
+.derecha {
+    width: 50%;
+    height: 500px;
+    text-align: center;
+    z-index: 19;
+    margin-left: 3em;
+    margin-top: -270px;
+}
+
+.texto {
+  text-align: center;
+  width: 100%;
+}
+
+.texto h1 {
+    font-family: "Cherry Bomb One", system-ui;
+    font-size: 4em;
+    font-weight: 400;
+    color: #0A5C1B;
+    line-height: 70px;
+    margin-bottom: 3.5rem;
+}
+
+.texto h2, .texto p {
+    font-family: "Josefin Sans";
+    color: #272523;
+    margin-bottom: 0.9em;
+    font-size: 2em;
+}
+
+.texto p {
+    margin-left: 0px;
+    font-size: 1.5em;
+}
+
+.texto h2 {
+    margin-bottom: 1em;
+}
+
+#conocelos-btn {
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1.2em;
+  color: white;
+  background-color: #58C22F;
+  border: none;
+  box-shadow: 3px 4px #68686824;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+
+/* Mobile Filtros y Tarjetas */
+
+/* Filtros */
+
+.mascotas-container {
+  width: 100%;
+  height: auto;
+  padding-bottom: 10em;
+  background-color: #C08AF3;
+  box-shadow: rgba(0, 0, 0, 0.25);
+}
+
+.mascotas-barra {
+  width: 100%;
+  height: auto;
+  gap: 1rem;
+  background-color: #F0D8FF;
+}
+
+.opciones-mascota {
+  width: auto;
+  padding: 0;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  align-items: center;
+  margin: 0px;
+}
+
+.opciones-mascota li, .opciones-mascota label{
+  font-size: 1.5em;
+}
+
+#bars-2 {
+  color: #ED8A0A;
+  margin-right: 5px;
+}
+
+select[name='ordenar'] {
+  background-color: #ED8A0A;
+  border-radius: 2em;
+  border: none;
+  padding-top: 0.4em;
+  padding-left: 1.1em;
+  padding-right: 1.1em;
+  padding-bottom: 0.4em;
+  color:#ffffff;
+  text-align: center;
+  font-family: 'Josefin Sans';
+  font-size: 0.8em;
+}
+
+#btn-limpiar {
+  background-color: #ED8A0A;
+  border-radius: 2em;
+  border: none;
+  padding-top: 0.4em;
+  padding-left: 1.1em;
+  padding-right: 1.1em;
+  padding-bottom: 0.4em;
+  color:#ffffff;
+  text-align: center;
+  font-family: 'Josefin Sans';
+  font-size: 0.8em;
+}
+
+#btn-limpiar:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+  border-radius: 2em;
+  border: none;
+  padding-top: 0.4em;
+  padding-left: 1.1em;
+  padding-right: 1.1em;
+  padding-bottom: 0.4em;
+  color:#ED8A0A;
+  text-align: center;
+  font-family: 'Josefin Sans';
+}
+
+select[name='elegir'] {
+  background-color: #5C2E80;
+  border-radius: 2em;
+  border: none;
+  padding-top: 0.4em;
+  padding-left: 1.1em;
+  padding-right: 1.1em;
+  padding-bottom: 0.4em;
+  color:#ffffff;
+  text-align: center;
+  font-family: 'Josefin Sans';
+}
+
+.mascotas-filtros {
+  width: auto;
+  margin: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.mascotas-filtros.active {
+  width: auto;
+  margin: 40px;
+  text-align: center;
+}
+
+/* Tarjetas */
+
+
+.mascotas-tarjetas {
+  width: auto;
+}
+
+.nuestras-mascotas {
+  width: auto;
+  font-family: "Cherry Bomb One";
+  font-size: 3.5em;
+  font-weight: 400;
+  margin-top: 1.2em;
+  margin-bottom: 1.4em;
+  color: #4C1271;
+  line-height: 60px;
+  text-align: center;
+}
+
+.titulo-secundario {
+  display: block;
+  margin-top: 10px;
+}
+
+.huesos1{
+  width: auto;
+  text-align: center;
+  margin-left: 180px;
+  margin-top: -200px;
+}
+
+.huesos2{
+  width: auto;
+  text-align: center;
+  margin-left: 180px;
+}
+
+.img-hueso1 {
+  width: 30%;
+  transform: scaleX(-1);
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+}
+
+.img-hueso2 {
+  width: 30%;
+  position: absolute;
+}
+
+.img-hueso3 {
+  width: 30%;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+}
+
+.img-hueso4 {
+  width: 30%;
+  transform: scaleX(-1);
+  position: absolute;
+}
+
+
+/* Tarjetas contenido */
+
+#root {
+  margin-top: 210px;
+}
+
+#root .ul-tarjeta{
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 0;
+  padding-inline-start: 0;
+  flex-wrap: wrap;
+  }
+
+#root li{
+  margin-top: 3em;
+}
+
+.tarjeta {
+  display: flex;
+  width: auto;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.412);
+  background-color: #ffffffe7;
+  max-width: 300px;
+}
+
+.tarjeta-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.tarjeta-contenido {
+    padding: 20px;
+    font-size: 1.5em;
+    margin: 0 0 16px;
+    color: #1e1e1e;
+}
+
+dd[itemprop="name"] {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 3em;
+  margin-right: 3em;
+  color: white;
+  padding: 1em;
+  text-align: center;
+  background-color: #8457A0;
+  ;
+}
+
+/* Footer */
+
+footer{
+  background: #FFB700;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5em;
+}
+
+footer .center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.center-column img {
+  max-width: 100%;
+  margin-bottom: 0.3em;
+}
+
+footer a{
+  font-size: 1.4em;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 0.7em;
+}
+
+footer h3{
+  font-size: 3em;
+  font-family: 'Cherry Bomb One';
+  color: #87500D;
+  margin-bottom: 0.3em;
+}
+
+.name{
+  margin-top: 1em;
+}
+
+.icon{
+  display: flex;
+  gap: 1em;
+}
+
+.icon i{
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+}
+
+/* --------------------- Desktop Design ------------------------- */
+*{
+  margin: 0;
+}
+
+@media (min-width: 992px) {
+
+  body{
+  font-family: 'Josefin Sans';
+  margin: 0;
+}
+
+/* Desktop Navbar */
+
+nav ul {
+  display: flex;
+  gap: 20px; 
+  padding: 0;
+  margin: 30px;
+}
+
+li {
+  list-style: none;
+}
+
+.navbar-options {
+  list-style-type: none;
+  margin: 30px;  
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1.7m;
+}
+
+/* Botón Navbar Dona aquí */
+
+.li-donations{
+  background-color: #ffffff;
+  border-radius: 2em;
+  padding-top: 0.4em;
+  padding-left: 1.1em;
+  padding-right: 1.1em;
+  padding-bottom: 0.4em;
+  color:#000000;
+  text-align: center;
+  font-family: 'Josefin Sans';
+}
+
+/* Mobile Sidebar btn */
+
+.menu-btn {
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: none;
+  color: #ffffff;
+}
+
+/* Ocultar Sidebar */
+
+#sidebar {
+  width: 300px; /* Definido un ancho fijo para la sidebar */
+  height: 100%;
+  position: absolute;
+  background: #ffffff;
+  left: -300px;
+  transition: left 0.4s ease;
+  z-index: 20;  
+}
+
+/* Activar Sidebar */
+
+#sidebar.active {
+  position: fixed;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  transition: .4s
+}
+
+#sidebar ul li {
+  padding-top: 0.5em;
+  color: #222222;
+  font-size: 100%;
+  font-weight: 400;
+  margin: 10%;  
+}
+
+#sidebar ul {
+  margin-top: 2em;
+}
+
+#sidebar .fa-xmark {
+  font-size: 1.5em;
+  position: absolute;
+  top: 20px; /* Añadido para posicionar el icono de cerrar */
+  right: 30px;
+  cursor: pointer;
+}
+
+/* Desktop Banner */
+  
+.banner {
     width: 100%;
-    height: 730px;
+    height: 530px;
     background-color: #7BE950;
     display: flex;
     justify-content: space-around;
@@ -170,7 +639,6 @@ li {
     color: #272523;
     margin-bottom: 1.2em;
     font-size: 1.2em;
-
 }
 
 .texto p {
@@ -197,10 +665,9 @@ li {
 
 .mascotas-container {
   width: 100%;
-  height: auto;
+  height: 1300px;
   background-color: #C08AF3;
   box-shadow: rgba(0, 0, 0, 0.25);
-
 }
 
 .mascotas-barra {
@@ -291,7 +758,6 @@ select[name='elegir'] {
   font-family: 'Josefin Sans';
 }
 
-
 /* Tarjetas */
 
 .mascotas-tarjetas {
@@ -350,434 +816,30 @@ select[name='elegir'] {
 .tarjeta {
   width: auto;
   height: 500px;
-  border: none;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.412);
-  background-color: #ffffffc2;
+  position: absolute;
+  border: none; 
+  border-radius: 8px; 
+  overflow: hidden; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.412); 
+  background-color: #ffffffc2; 
+  max-width: 300px; 
+  margin: 20px; 
+  z-index: 15;
 }
 
 /* Tarjetas contenido */
 
 .tarjeta-img {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 100%; 
+  height: auto; 
+  display: block; 
 }
 
 .tarjeta-contenido {
-  padding: 20px;
-  font-size: 1em;
-  margin: 0 0 16px;
-  color: #1e1e1e;
+  padding: 20px; 
+  font-size: 1em; 
+  margin: 0 0 16px; 
+  color: #1e1e1e; 
 }
-
-
-/* Footer */
-
-footer{
-  background: #FFB700;
-  height: 300px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-
-footer .colum{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5em;
-}
-
-footer .center-colum{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.center-column img {
-  max-width: 100%;
-  margin-bottom: 0.3em;
-}
-
-footer a{
-  font-size: 1.4em;
-  text-decoration: none;
-  color: white;
-  margin-bottom: 0.7em;
-}
-
-footer h3{
-  font-size: 3em;
-  color: #87500D;
-  margin-bottom: 0.3em;
-}
-
-.name{
-  margin-top: 1em;
-}
-
-.icon{
-  display: flex;
-  gap: 1em;
-}
-
-.icon i{
-  font-size: 2em;
-  color: white;
-  cursor: pointer;
-}
-
-
-  /* --------------------- Mobile Design ------------------------- */
-
-/* Mobile Navbar */
-
-@media (min-width: 992px) {
-  .sidebar {
-    display: none;
-  }
-}
-
-@media (max-width: 992px) {
-  .navbar-options {
-    display: none;
-    gap: 0;
-  }
-
-  nav {
-    justify-content: baseline;
-  }
-
-  .menu-btn {
-    font-size: 1.4rem;
-    display: block;
-    margin: 20px;
-  }
-
-  nav ul {
-    display: flex;
-    gap: 20px;
-    padding: 0;
-    margin: 20px;
-  }
-}
-
-/* Mobile Banner */
-
-@media (max-width: 992px) {
-
-  .banner {
-    width: 100%;
-    height: 1050px;
-    background-color: #7BE950;
-    display: flex;
-    flex-direction: column; /*ponerlo en columna*/
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  .izquierda {
-      width: 70%;
-      height: 500px;
-      display: flex;
-      justify-content: center;
-      margin-top: 8rem;
-      margin-left: 6.5em;
-      text-align: center;
-      z-index: 19;
-  }
-
-  .vector {
-    position: absolute;
-    margin-right: 20px;
-    width: 80%;
-    height: 400px;
-    margin-top: -80px;
-    margin-right: 105px;
-  }
-
-  .img-banner {
-      z-index: 19;
-      width: auto;
-      height: 250px;
-      margin-right: 90px;
-      margin-top: -5px;
-  }
-
-  .derecha {
-      width: 50%;
-      height: 500px;
-      text-align: center;
-      z-index: 19;
-      margin-left: 3em;
-      margin-top: -120px;
-  }
-
-  .texto {
-    text-align: center;
-    width: 100%;
-  }
-
-  .texto h1 {
-      font-family: "Cherry Bomb One", system-ui;
-      font-size: 4em;
-      font-weight: 400;
-      color: #0A5C1B;
-      line-height: 70px;
-      margin-bottom: 3.5rem;
-  }
-
-  .texto h2, .texto p {
-      font-family: "Josefin Sans";
-      color: #272523;
-      margin-bottom: 0.9em;
-      font-size: 2em;
-  }
-
-  .texto p {
-      margin-left: 0px;
-      font-size: 1.5em;
-  }
-
-  .texto h2 {
-      margin-bottom: 1em;
-  }
-
-  .conocelos-btn {
-    margin-top: 20px;
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    font-size: x-large;
-    color: white;
-    background-color: #58C22F;
-    border: none;
-    font-family: "Josefin Sans";
-  }
-}
-
-/* Mobile Filtros y Tarjetas */
-
-/* Filtros */
-
-@media (max-width: 992px) {
-
-  .mascotas-container {
-    width: 100%;
-    height: auto;
-    padding-bottom: 10em;
-    background-color: #C08AF3;
-    box-shadow: rgba(0, 0, 0, 0.25);
-
-  }
-
-  .mascotas-barra {
-    width: 100%;
-    height: 80px;
-    gap: 1rem;
-    background-color: #F0D8FF;
-  }
-
-  .opciones-mascota {
-    width: auto;
-    padding: 0;
-    height: 80px;
-    display: flex;
-    justify-content: space-around;
-    gap: 1rem;
-    align-items: center;
-  }
-
-  #bars-2 {
-    color: #ED8A0A;
-    margin-right: 5px;
-  }
-
-  select[name='ordenar'] {
-    background-color: #ED8A0A;
-    border-radius: 2em;
-    border: none;
-    padding-top: 0.4em;
-    padding-left: 1.1em;
-    padding-right: 1.1em;
-    padding-bottom: 0.4em;
-    color:#ffffff;
-    text-align: center;
-    font-family: 'Josefin Sans';
-    font-size: 0.8em;
-  }
-
-  #btn-limpiar {
-    background-color: #ED8A0A;
-    border-radius: 2em;
-    border: none;
-    padding-top: 0.4em;
-    padding-left: 1.1em;
-    padding-right: 1.1em;
-    padding-bottom: 0.4em;
-    color:#ffffff;
-    text-align: center;
-    font-family: 'Josefin Sans';
-    font-size: 0.8em;
-  }
-
-  #btn-limpiar::placeholder {
-    cursor: pointer;
-    background-color: #ffffff;
-    border-radius: 2em;
-    border: none;
-    padding-top: 0.4em;
-    padding-left: 1.1em;
-    padding-right: 1.1em;
-    padding-bottom: 0.4em;
-    color:#ED8A0A;
-    text-align: center;
-    font-family: 'Josefin Sans';
-  }
-
-  select[name='ordenar-2'] {
-    background-color: #5C2E80;
-    border-radius: 2em;
-    border: none;
-    padding-top: 0.4em;
-    padding-left: 1.1em;
-    padding-right: 1.1em;
-    padding-bottom: 0.4em;
-    color:#ffffff;
-    text-align: center;
-    font-family: 'Josefin Sans';
-  }
-
-/* Tarjetas */
-
-  .mascotas-filtros {
-    width: auto;
-    margin: 40px;
-    text-align: center;
-    display: none;
-  }
-
-  .mascotas-filtros.active {
-    width: auto;
-    margin: 40px;
-    text-align: center;
-  }
-
-  .tarjeta {
-    display: flex;
-    width: auto;
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.412);
-    background-color: #ffffffbc;
-    max-width: 400px;
-  }
-
-/* Tarjetas contenido */
-
-  .mascotas-tarjetas {
-    width: auto;
-  }
-
-  .nuestras-mascotas {
-    width: auto;
-    font-family: "Cherry Bomb One";
-    font-size: 3.5em;
-    font-weight: 400;
-    margin-top: 1.2em;
-    margin-bottom: 1.4em;
-    color: #4C1271;
-    line-height: 60px;
-    text-align: center;
-  }
-
-  .titulo-secundario {
-    display: block;
-    margin-top: 10px;
-  }
-
-  .huesos1{
-    width: auto;
-    text-align: center;
-    margin-left: 180px;
-    margin-top: -200px;
-  }
-
-  .huesos2{
-    width: auto;
-    text-align: center;
-    margin-left: 180px;
-  }
-
-  .img-hueso1 {
-    width: 30%;
-    transform: scaleX(-1);
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .img-hueso2 {
-    width: 30%;
-    position: absolute;
-  }
-
-  .img-hueso3 {
-    width: 30%;
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .img-hueso4 {
-    width: 30%;
-    transform: scaleX(-1);
-    position: absolute;
-  }
-
-  #root .ul-tarjeta{
-    display: flex;
-    justify-content: space-evenly;
-    margin-left: 0;
-    padding-inline-start: 0;
-    flex-wrap: wrap;
-    }
-
-  #root li{
-    margin-top: 3em;
-  }
-
-  .tarjeta-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-
-  .tarjeta-contenido {
-      padding: 20px;
-      font-size: 1.5em;
-      margin: 0 0 16px;
-      color: #1e1e1e;
-  }
-
-  dd[itemprop="name"] {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 3em;
-    margin-right: 3em;
-    color: white;
-    padding: 1em;
-    text-align: center;
-    background-color: #8457A0;
-    ;
-  }
 
 }

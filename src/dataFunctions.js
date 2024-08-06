@@ -2,20 +2,15 @@
 import petsData from './data/dataset.js';
 
 const dataFunctions = {
-
-
-  showDogs: (text) => {
-
+      
+  showPets: () => {  
     if(Array.isArray(petsData)){
-      for(let i=0; i<petsData.length;i++){
-        return petsData;
-      }
+      return petsData;
     }
-      else{
-        return [];
-      }
+    else{
+      return [];
     }
-
+  }
 }
 
 export default dataFunctions;

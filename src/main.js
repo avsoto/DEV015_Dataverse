@@ -1,5 +1,5 @@
-
-import petsData from './data/dataset.js';
+import renderItems from './view.js';
+import dataFunctions from './dataFunctions.js';
 
 window.onload=function(){
   const menuBtn = document.querySelector('.menu-btn')
@@ -26,41 +26,19 @@ buttonFilters.addEventListener("click", () => {
   console.log("funciona");
 })
 
-/*
-MUESTRA LA DATA - PERO NO SÉ SI ESTO VA AQUÍ EN MAIN O EN VIEW
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   const ul = root.querySelector('ul');
-
   ul.innerHTML = '';
-
-
-  petsData.forEach(dog => {
-    const dogItem = document.createElement('li');
-    dogItem.className = 'tarjeta';
-
-    dogItem.setAttribute('itemscope', '');
-    dogItem.setAttribute('itemtype', 'NuestrasMascotas');
-    dogItem.innerHTML = `
-     <dl itemscope itemtype="http://schema.org/Pet" class="tarjeta-contenido">
-     <div class="tarjeta-img-container">
-      <img class="tarjeta-img" src="${dog.imageUrl}" alt="${dog.name}">
-      </div>
-      <dt></dt><dd itemprop="name">${dog.name}</dd>
-      <dt></dt><dd itemprop="description">${dog.description}</dd>
-      <dt>Edad:</dt><dd itemprop="age">${dog.facts.age}</dd>
-      <dt>Género:</dt><dd itemprop="gender">${dog.facts.gender}</dd>
-      <dt>Raza:</dt><dd itemprop="breed">${dog.facts.breed}</dd>
-      <dt>Tamaño:</dt><dd itemprop="size">${dog.facts.size}</dd>
-      <dt>Comportamiento:</dt><dd itemprop="temperament">${dog.facts.temperament}</dd>
-    </dl>
-        `;
-
-    ul.appendChild(dogItem);
+  const pets = dataFunctions.showPets();
+  pets.forEach(pet => {
+    const petItem = document.createElement('li');
+    petItem.className = 'tarjeta';
+    // Usar la función para obtener el HTML
+    petItem.innerHTML = renderItems(pet);
+    ul.appendChild(petItem);
   })
-
-
-
 })
-*/
+
+
