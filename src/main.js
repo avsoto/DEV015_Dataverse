@@ -26,19 +26,21 @@ buttonFilters.addEventListener("click", () => {
   console.log("funciona");
 })
 
-
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   const ul = root.querySelector('ul');
   ul.innerHTML = '';
+
   const pets = dataFunctions.showPets();
+
+//Agregar la función showPets
+
   pets.forEach(pet => {
     const petItem = document.createElement('li');
     petItem.className = 'tarjeta';
-    // Usar la función para obtener el HTML
-    petItem.innerHTML = renderItems(pet);
+
+    petItem.innerHTML = renderItems(pet)
+
     ul.appendChild(petItem);
   })
 })
-
-

@@ -14,5 +14,5 @@ export const renderItems = (pet) => {
     </dl>
   `;
 };
-export default renderItems;
 
+export default renderItems;
