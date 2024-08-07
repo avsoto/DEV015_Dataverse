@@ -23,7 +23,7 @@ buttonFilters.addEventListener("click", () => {
    * https://www.estudionexos.com/post/efecto-slide-con-css-selectores-y-transiciones/
    * https://siongui.github.io/2017/02/27/css-only-toggle-dom-element/
    */
-  console.log("funciona");
+
 })
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const pets = dataFunctions.showPets();
 
-//Agregar la función showPets
+  //Agregar la función showPets
 
   pets.forEach(pet => {
     const petItem = document.createElement('li');

@@ -8,9 +8,9 @@ const dataFunctions = {
     if(Array.isArray(petsData)){
       return petsData;
     }
-      else{
-        return [];
-      }
+    else{
+      return [];
+    }
   }
 
 }
