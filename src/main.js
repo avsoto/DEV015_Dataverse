@@ -1,4 +1,4 @@
-import renderItems from './view.js';
+import { renderItems } from './view.js';
 import dataFunctions from './dataFunctions.js';
 
 window.onload=function(){
@@ -23,11 +23,16 @@ buttonFilters.addEventListener("click", () => {
    * https://www.estudionexos.com/post/efecto-slide-con-css-selectores-y-transiciones/
    * https://siongui.github.io/2017/02/27/css-only-toggle-dom-element/
    */
+<<<<<<< HEAD
+=======
+})
+>>>>>>> jas-repo/feat/footer
 
 })
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
+<<<<<<< HEAD
   const ul = root.querySelector('ul');
   ul.innerHTML = '';
 
@@ -44,3 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
     ul.appendChild(petItem);
   })
 })
+=======
+  const pets = dataFunctions.showPets();
+  // root.innerHTML = renderItems(pets)
+  root.appendChild( renderItems(pets))
+})
+
+//Funciones //
+
+
+>>>>>>> jas-repo/feat/footer
