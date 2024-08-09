@@ -298,15 +298,10 @@ select[name='elegir'] {
 
 .mascotas-filtros {
   width: auto;
-  margin: 40px;
-  display: flex;
-  justify-content: center;
-}
-
-.mascotas-filtros.active {
-  width: auto;
-  margin: 40px;
+  margin: 50px 0px;
   text-align: center;
+  display: none;
+  justify-content: center;
 }
 
 /* Tarjetas */
@@ -781,15 +776,11 @@ select[name='elegir'] {
   width: auto;
   margin: 40px;
   text-align: center;
-  display: flex;
+  display: none;
   justify-content: center;
 }
 
-.mascotas-filtros.active {
-  width: auto;
-  margin: 40px;
-  text-align: center;
-}
+
 
 select[name='elegir'] {
   background-color: #5C2E80;

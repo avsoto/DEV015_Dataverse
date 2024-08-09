@@ -1,4 +1,4 @@
-/*Manipulación de datos*/
+/* Manipulación de datos */
 import petsData from './data/dataset.js';
 
 const dataFunctions = {
@@ -12,5 +12,9 @@ const dataFunctions = {
     }
   }
 }
+
+/* Filtro de Datos */
+
+
 
 export default dataFunctions;
