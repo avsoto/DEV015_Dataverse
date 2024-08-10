@@ -20,6 +20,18 @@ window.onload=function(){
   }
 }
 
+// Botón Conócelos //
+
+const btnConocelos = document.querySelector('#conocelos-btn')
+const sectionTarjetas = document.querySelector('#tarjetas-section')
+
+btnConocelos.addEventListener('click', () => {
+  sectionTarjetas.scrollIntoView({
+    behavior: 'smooth'
+  });
+});
+
+
 // Botón aparecer Filtros //
 
 document.querySelector('.boton-filtros').addEventListener('click', function () {
