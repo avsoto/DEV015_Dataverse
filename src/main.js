@@ -1,7 +1,10 @@
 import { renderItems } from './view.js';
 import dataFunctions from './dataFunctions.js';
+import petsData from './data/dataset.js';
 
 /*Botón para abrir y cerrar Sidebar */
+
+const root = document.getElementById('root')
 
 window.onload=function(){
   const menuBtn = document.querySelector('.menu-btn')
@@ -17,16 +20,7 @@ window.onload=function(){
   }
 }
 
-/* Botón para deslizar Filtros 
-const buttonFilters = document.querySelector('.boton-filtros');
-buttonFilters.addEventListener("click", () => {
-  /**
-   * https://www.estudionexos.com/post/efecto-slide-con-css-selectores-y-transiciones/
-   * https://siongui.github.io/2017/02/27/css-only-toggle-dom-element/
-   
-}) */
-
-/*Botón aparecer filtros Propuesta Jas */
+// Botón aparecer Filtros //
 
 document.querySelector('.boton-filtros').addEventListener('click', function () {
   const botones = document.querySelector('.mascotas-filtros');
@@ -39,10 +33,78 @@ document.querySelector('.boton-filtros').addEventListener('click', function () {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const root = document.getElementById('root');
   const pets = dataFunctions.showPets();
-  // root.innerHTML = renderItems(pets)
   root.appendChild( renderItems(pets));
 })
 
+//------------------ Funciones Filtrar ------------------//
+
+// Filtro Tipo //
+
+const selectTipo = document.querySelector('#tipo');
+
+selectTipo.addEventListener('change', (event) => {
+  const valorElegido = event.target.value;
+  let resultado;    
+  if (valorElegido === "Perro")  {
+    root.innerHTML = ''
+    resultado = dataFunctions.filterData(petsData,'type', valorElegido.toLowerCase());
+  }    
+  else if (valorElegido === "Gato") {
+    root.innerHTML = ''
+    resultado = dataFunctions.filterDataByType(petsData, 'type', valorElegido.toLowerCase()); 
+  }
+  root.appendChild(renderItems(resultado))
+ 
+}); 
+
+// Filtro Género //
+
+const selectGenero = document.querySelector('#genero');
+
+selectGenero.addEventListener('change', (event) => {
+  const valorElegido = event.target.value;
+  let resultado;   
+
+  if (valorElegido === "Macho" || valorElegido === "Hembra")  {
+    root.innerHTML = ''
+    resultado = dataFunctions.filterDataByGender(petsData,'gender', valorElegido);
+  }     
+
+  root.appendChild(renderItems(resultado))
+
+});
+
+
+//Filtro Tamaño //
+
+const selectTamaño = document.querySelector('#tamaño');
+selectTamaño.addEventListener('change', (event) => {
+  const valorElegido = event.target.value;
+  let resultado;   
+
+  if (valorElegido === "Pequeño" || valorElegido === "Mediano" || valorElegido === "Grande")  {
+    root.innerHTML = ''
+    resultado = dataFunctions.filterDataBySize(petsData,'size', valorElegido);
+  }     
+
+  root.appendChild(renderItems(resultado))
+   
+}); 
+
+// Botón Limpiar //
+
+const botonLimpiar = document.querySelector('#btn-limpiar');
+botonLimpiar.addEventListener('click', (event) => {
+  const pets = event.dataFunctions.showPets();
+
+  selectTipo.value = "";
+  selectGenero.value = "";
+  //selectAge.value = "";
+  selectTamaño.value = "";
+
+  root.innerHTML = "";
+  root.appendChild(renderItems(pets));
+
+})
 
