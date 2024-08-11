@@ -22,6 +22,17 @@ const dataFunctions = {
     return petsData.filter(petType => petType[filterBy] === value)
   },
 
+  // Filtro Edad //
+
+  filterData(petsData,filterBy, minValue, maxValue){
+    return petsData.filter(pet => {
+      
+      const valorFiltrado = pet.facts[filterBy];
+
+      return valorFiltrado >= minValue && valorFiltrado <= maxValue;
+    })
+  },
+
   //Filtro Género //
 
   filterDataByGender: (petsData,filterBy,value)=> {
@@ -34,7 +45,20 @@ const dataFunctions = {
     return petsData.filter(petSize => petSize.facts[filterBy] === value)
   },
 
+  //Filtro Tamaño //
+
+  orderByNameAsc: (petsData)=> {
+    return petsData.sort((a,b)=> {return (a.name > b.name) ? 1 : -1 });
+  },
+
+  orderByNameDesc: (petsData)=> {
+    return petsData.sort((a,b)=> {return (a.name < b.name) ? 1 : -1 });
+
+  }
+
 }
+
+
 
 export default dataFunctions;
 

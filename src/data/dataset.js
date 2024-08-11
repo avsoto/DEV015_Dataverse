@@ -10,6 +10,7 @@ const petsData = [
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%201.jpeg?alt=media&token=0aa405af-4449-48f1-95dc-f3326dd5325f",
     "facts": {
       "age": "4 años",
+      "age": "4",
       "gender": "Macho",
       "breed": "Labrador Retriever",
       "size": "Grande",
@@ -28,6 +29,7 @@ const petsData = [
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%202.jpeg?alt=media&token=17af3603-6078-4bb2-a72b-7220951c8891",
     "facts": {
       "age": "2 años",
+      "age": "2",
       "gender": "Hembra",
       "breed": "Chihuahua",
       "size": "Pequeña",
@@ -46,6 +48,7 @@ const petsData = [
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%203.jpeg?alt=media&token=bc7bd01a-c48b-4e7b-a062-f6f15dab803d",
     "facts": {
       "age": "5 años",
+      "age": "5",
       "gender": "Macho",
       "breed": "Schnauzer",
       "size": "Mediano",
@@ -64,6 +67,7 @@ const petsData = [
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%204.jpeg?alt=media&token=7e4c0214-a386-4c3c-99f0-e692acc340e0",
     "facts": {
       "age": "8 años",
+      "age": "8",
       "gender": "Macho",
       "breed": "Cocker Spaniel",
       "size": "Mediano",
@@ -84,6 +88,7 @@ const petsData = [
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%205.jpeg?alt=media&token=72a5d14c-e61d-4b6c-859d-c423b3c1d8c4",
     "facts": {
       "age": "3 años",
+      "age": "3",
       "gender": "Macho",
       "breed": "Golden Retriever",
       "size": "Mediano",
@@ -102,6 +107,7 @@ const petsData = [
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%206.jpeg?alt=media&token=a84c814f-4c1f-4d11-85ff-114034d307bf",
     "facts": {
       "age": "1 año",
+      "age": "1",
       "gender": "Hembra",
       "breed": "Bulldog Francés",
       "size": "Pequeña",
@@ -120,6 +126,7 @@ const petsData = [
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%207.jpeg?alt=media&token=598bed7f-b5d7-4e58-b762-3765a17f192f",
     "facts": {
       "age": "4 años",
+      "age": "4",
       "gender": "Macho",
       "breed": "Husky",
       "size": "Grande",
@@ -138,6 +145,7 @@ const petsData = [
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%208.jpeg?alt=media&token=bd1b9616-6a7f-4ba5-bb2a-9dbf2979edb1",
     "facts": {
       "age": "2 años",
+      "age": "2",
       "gender": "Hembra",
       "breed": "Yorkshire Terrier",
       "size": "Pequeña",
@@ -233,6 +241,7 @@ const petsData = [
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Gatos%2Fgato%201.jpeg?alt=media&token=ded925e1-3588-4972-944d-1985795f3de9",
     "facts": {
       "age": "4 años",
+      "age": "4",
       "gender": "Macho",
       "breed": "Maine Coon",
       "size": "Grande",
@@ -251,6 +260,7 @@ const petsData = [
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Gatos%2Fgato%202.jpeg?alt=media&token=ed838caa-a4eb-42ed-93dc-ee06ecf290b2",
     "facts": {
       "age": "2 años",
+      "age": "2",
       "gender": "Hembra",
       "breed": "Siamés",
       "size": "Pequeña",
@@ -269,6 +279,7 @@ const petsData = [
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Gatos%2Fgato%203.jpeg?alt=media&token=944c9f5c-49cf-4d4f-9c5b-d3ac34b2b6f0",
     "facts": {
       "age": "5 años",
+      "age": "5",
       "gender": "Macho",
       "breed": "Bengalí",
       "size": "Mediano",
@@ -287,6 +298,7 @@ const petsData = [
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Gatos%2Fgato%204.jpeg?alt=media&token=7e8658a1-b67a-4508-a986-6f7d51503ef3",
     "facts": {
       "age": "8 años",
+      "age": "8",
       "gender": "Hembra",
       "breed": "Persa",
       "size": "Mediano",
@@ -307,6 +319,7 @@ const petsData = [
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Gatos%2Fgato%205.jpeg?alt=media&token=aaa601d8-d122-49c2-be85-929474d6c702",
     "facts": {
       "age": "3 años",
+      "age": "3",
       "gender": "Macho",
       "breed": "Siamés",
       "size": "Mediano",
@@ -325,6 +338,7 @@ const petsData = [
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Gatos%2Fgato%206.jpeg?alt=media&token=604135bf-2efb-4ff2-ab73-7ef37611b357",
     "facts": {
       "age": "2 años",
+      "age": "2",
       "gender": "Hembra",
       "breed": "Maine Coon",
       "size": "Mediana",
@@ -343,6 +357,7 @@ const petsData = [
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Gatos%2Fgato%207.jpeg?alt=media&token=45fd6469-43f0-4f73-a8f8-96481363f593",
     "facts": {
       "age": "4 años",
+      "age": "4",
       "gender": "Macho",
       "breed": "British Shorthair",
       "size": "Mediano",
@@ -361,6 +376,7 @@ const petsData = [
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Gatos%2Fgato%208.jpeg?alt=media&token=75e77730-93be-4a6f-b9ad-ade804b7c637",
     "facts": {
       "age": "3 años",
+      "age": "3",
       "gender": "Hembra",
       "breed": "Siberiano",
       "size": "Mediana",

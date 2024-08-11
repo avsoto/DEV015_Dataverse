@@ -80,13 +80,11 @@
       <div class="mascotas-barra">
         <ul class="opciones-mascota">
           <li class="boton-filtros"><i class="fa-solid fa-bars" id="bars-2"></i>Filtros</li>
-          <label for="ordenar">Ordenar por: </label>
-            <select id="ordenar" name="ordenar" data-testid="select-sort">
-              <option value="asc" selected>A-Z</option>
-              <option value="desc">Z-A</option>
-            </select>
-          <li>
-            <button id="btn-limpiar">Limpiar</button>
+            <label id="orden"> Ordenar por:
+                <input id="asc" type="radio" name="sort-order" value="asc" ><i class="fa-solid fa-arrow-down-a-z" style="color: #ed8a0a;"></i>
+                <input id="desc" type="radio" name="sort-order" value="desc"><i class="fa-solid fa-arrow-up-a-z" style="color: #ed8a0a;"></i>
+            </label>
+            <button id="btn-estadísticas">Estadísticas</button>
           </li>
         </ul>
       </div>
@@ -101,7 +99,7 @@
 
           <label for="edad"></label>
           <select id="edad" name="elegir">
-            <option value="Edad" selected>Edad</option>
+            <option value="Edad" disabled selected hidden>Edad</option>
             <option value="Cachorro">Cachorro</option>
             <option value="Adulto">Adulto</option>
             <option value="Mayor">Mayor</option>
@@ -109,19 +107,22 @@
 
           <label for="genero"></label>
           <select id="genero" name="elegir">
-            <option value="Genero" selected>Género</option>
-            <option value="Macho" selected>Macho</option>
+            <option value="Genero" disabled selected hidden>Género</option>
+            <option value="Macho">Macho</option>
             <option value="Hembra">Hembra</option>
           </select>
 
           <label for="tamaño"></label>
           <select id="tamaño" name="elegir">
-            <option value="Tamaño" selected>Tamaño</option>
-            <option value="Pequeño" selected>Pequeño</option>
+            <option value="Tamaño" disabled selected hidden>Tamaño</option>
+            <option value="Pequeño">Pequeño</option>
             <option value="Mediano">Mediano</option>
             <option value="Grande">Grande</option>
           </select>
 
+          <div>
+          <button id="btn-limpiar">Limpiar</button>
+          </div>
         </div>
       <section class="mascotas-tarjetas">
         <h2 class="nuestras-mascotas">
