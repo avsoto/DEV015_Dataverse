@@ -254,7 +254,7 @@ select[name='ordenar'] {
   font-size: 0.8em;
 }
 
-#btn-limpiar {
+#btn-estadísticas {
   background-color: #ED8A0A;
   border-radius: 2em;
   border: none;
@@ -265,20 +265,36 @@ select[name='ordenar'] {
   color:#ffffff;
   text-align: center;
   font-family: 'Josefin Sans';
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
-#btn-limpiar:hover {
-  cursor: pointer;
-  background-color: #ffffff;
+#btn-limpiar {
+  background-color: #f3ce00;
+  margin: 50px 0px 0px 0px;
   border-radius: 2em;
   border: none;
   padding-top: 0.4em;
   padding-left: 1.1em;
   padding-right: 1.1em;
   padding-bottom: 0.4em;
-  color:#ED8A0A;
+  color:#ffffff;
   text-align: center;
+  font-family: 'Josefin Sans';
+  font-size: 1.3em;
+}
+
+#btn-limpiar:hover {
+  cursor: pointer;
+  background-color: #ffffffc5;
+  border-radius: 2em;
+  border: none;
+  padding-top: 0.4em;
+  padding-left: 1.1em;
+  padding-right: 1.1em;
+  padding-bottom: 0.4em;
+  color:#5C2E80;
+  text-align: center;
+  font-size: 1.3em;
   font-family: 'Josefin Sans';
 }
 
@@ -298,15 +314,10 @@ select[name='elegir'] {
 
 .mascotas-filtros {
   width: auto;
-  margin: 40px;
-  display: flex;
-  justify-content: center;
-}
-
-.mascotas-filtros.active {
-  width: auto;
-  margin: 40px;
+  margin: 50px 0px;
   text-align: center;
+  display: none;
+  justify-content: center;
 }
 
 /* Tarjetas */
@@ -736,7 +747,8 @@ select[name='ordenar'] {
   font-family: 'Josefin Sans';
 }
 
-#btn-limpiar {
+
+#btn-estadísticas {
   background-color: #ED8A0A;
   border-radius: 2em;
   border: none;
@@ -747,21 +759,39 @@ select[name='ordenar'] {
   color:#ffffff;
   text-align: center;
   font-family: 'Josefin Sans';
+  font-size: 0.9em;
 }
 
-#btn-limpiar:hover {
-  cursor: pointer;
-  background-color: #ffffff;
+#btn-limpiar {
+  background-color: #f3ce00;
+  margin: 50px 0px 0px 0px;
   border-radius: 2em;
   border: none;
   padding-top: 0.4em;
   padding-left: 1.1em;
   padding-right: 1.1em;
   padding-bottom: 0.4em;
-  color:#ED8A0A;
+  color:#ffffff;
   text-align: center;
   font-family: 'Josefin Sans';
+  font-size: 1.3em;
 }
+
+#btn-limpiar:hover {
+  cursor: pointer;
+  background-color: #ffffffc5;
+  border-radius: 2em;
+  border: none;
+  padding-top: 0.4em;
+  padding-left: 1.1em;
+  padding-right: 1.1em;
+  padding-bottom: 0.4em;
+  color:#5C2E80;
+  text-align: center;
+  font-size: 1.3em;
+  font-family: 'Josefin Sans';
+}
+
 
 select[name='elegir'] {
   background-color: #5C2E80;
@@ -781,15 +811,11 @@ select[name='elegir'] {
   width: auto;
   margin: 40px;
   text-align: center;
-  display: flex;
+  display: none;
   justify-content: center;
 }
 
-.mascotas-filtros.active {
-  width: auto;
-  margin: 40px;
-  text-align: center;
-}
+
 
 select[name='elegir'] {
   background-color: #5C2E80;

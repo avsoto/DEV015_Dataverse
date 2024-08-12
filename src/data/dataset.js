@@ -9,7 +9,8 @@ const petsData = [
     "description": "Rex es un perro grande con pelaje marrón y ojos alegres. Abandonado en el parque local, Rex busca una nueva familia que le brinde el amor y la atención que merece. Es un perro muy enérgico que disfruta jugar con pelotas y correr en el jardín. Ideal para quienes disfrutan de actividades al aire libre y buscan un compañero leal. Rex necesita mucho ejercicio y atención, por lo que es perfecto para familias activas que puedan ofrecerle el espacio y cariño necesarios para que se desarrolle felizmente.",
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%201.jpeg?alt=media&token=0aa405af-4449-48f1-95dc-f3326dd5325f",
     "facts": {
-      "age": "12",
+      "age": "4 años",
+      "age": "4",
       "gender": "Macho",
       "breed": "Labrador Retriever",
       "size": "Grande",
@@ -27,6 +28,7 @@ const petsData = [
     "description": "Samantha es una perra pequeña con pelaje blanco y negro, encontrada en la calle. A pesar de su situación, es dulce y cariñosa, ideal para una familia que busque una compañera leal y afectuosa. Samantha es muy adaptable y le encanta estar cerca de las personas. Está buscando un hogar donde pueda recibir el cariño y cuidado que merece. Su tamaño pequeño la hace ideal para apartamentos o casas con menos espacio, donde pueda sentirse completamente segura y muy amada.",
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%202.jpeg?alt=media&token=17af3603-6078-4bb2-a72b-7220951c8891",
     "facts": {
+      "age": "2 años",
       "age": "2",
       "gender": "Hembra",
       "breed": "Chihuahua",
@@ -45,7 +47,8 @@ const petsData = [
     "description": "Rocky es un perro mediano con pelaje gris que fue dejado en un refugio. Busca una familia amorosa que pueda ofrecerle cariño y atención. Es leal y juguetón, ideal para un hogar que pueda brindarle mucha interacción y espacio para jugar. Rocky se lleva bien con otros perros y necesita un ambiente activo donde pueda canalizar su energía. Su carácter amable y su afecto hacia las personas lo convierten en un excelente compañero para cualquier familia dispuesta a ofrecerle un hogar.",
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%203.jpeg?alt=media&token=bc7bd01a-c48b-4e7b-a062-f6f15dab803d",
     "facts": {
-      "age": "6",
+      "age": "5 años",
+      "age": "5",
       "gender": "Macho",
       "breed": "Schnauzer",
       "size": "Mediano",
@@ -63,6 +66,7 @@ const petsData = [
     "description": "Toby es un perro mayor con pelaje blanco que fue encontrado en la calle. Está esperando en un refugio por un hogar cálido y amoroso. Aunque es mayor, Toby sigue siendo cariñoso y tranquilo, ideal para una familia que busque un compañero apacible. No necesita mucho ejercicio, pero sí mucho cariño. Su naturaleza tranquila lo convierte en un gran amigo para aquellos que buscan un perro tranquilo y amoroso que pueda integrarse fácilmente en su vida diaria pero sobre todo que les brinde mucha felicidad.",
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%204.jpeg?alt=media&token=7e4c0214-a386-4c3c-99f0-e692acc340e0",
     "facts": {
+      "age": "8 años",
       "age": "8",
       "gender": "Macho",
       "breed": "Cocker Spaniel",
@@ -83,6 +87,7 @@ const petsData = [
     "description": "Max es un perro mediano con pelaje dorado que se perdió en un vecindario. Busca desesperadamente a su dueño. Es un perro activo y cariñoso que disfruta correr y jugar. Mientras tanto, Max está buscando un hogar temporal donde pueda recibir la atención y cuidados necesarios. Max es un compañero leal y afectuoso, ideal para quienes pueden ofrecerle un espacio seguro y mucho amor hasta que se reúna con su familia. Su carácter enérgico y su necesidad de compañía hacen que necesite un hogar activo.",
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%205.jpeg?alt=media&token=72a5d14c-e61d-4b6c-859d-c423b3c1d8c4",
     "facts": {
+      "age": "3 años",
       "age": "3",
       "gender": "Macho",
       "breed": "Golden Retriever",
@@ -101,6 +106,7 @@ const petsData = [
     "description": "Lola es una perra pequeña con pelaje atigrado que se extravió en un parque local. Es una perra amistosa y cariñosa que se lleva bien con otras mascotas. Mientras espera a su dueño, Lola está disponible para ser adoptada por una familia amorosa que pueda ofrecerle un hogar temporal. Es ideal para quienes buscan una perra dulce y muy bien educada, que pueda integrarse sin problemas a su hogar pero sobre todo que proporcione todo el amor y compañía a sus cuidadores durante este tiempo de espera.",
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%206.jpeg?alt=media&token=a84c814f-4c1f-4d11-85ff-114034d307bf",
     "facts": {
+      "age": "1 año",
       "age": "1",
       "gender": "Hembra",
       "breed": "Bulldog Francés",
@@ -119,7 +125,8 @@ const petsData = [
     "description": "Charlie es un perro grande con pelaje peludo que se perdió en un vecindario. A pesar de estar perdido, Charlie sigue siendo un compañero leal y cariñoso. Es juguetón y necesita mucho espacio para moverse y jugar. Mientras busca a su familia, está disponible para un hogar temporal que le brinde cuidado, atención y mucho amor. Su tamaño y energía requieren un hogar con suficiente espacio y una familia dispuesta a interactuar con él, ofreciendo todo el amor, juegos y cuidado que necesita.",
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%207.jpeg?alt=media&token=598bed7f-b5d7-4e58-b762-3765a17f192f",
     "facts": {
-      "age": "5",
+      "age": "4 años",
+      "age": "4",
       "gender": "Macho",
       "breed": "Husky",
       "size": "Grande",
@@ -137,6 +144,7 @@ const petsData = [
     "description": "Molly es una perra pequeña con pelaje atigrado que se perdió en un parque local. Es amable y se lleva bien con otros animales. Mientras espera a su familia, Molly está buscando un hogar temporal donde pueda sentirse segura y querida. Su pequeño tamaño y naturaleza amistosa la hacen ideal para hogares con niños y otras mascotas. Molly necesita un entorno amoroso y seguro mientras se reúne con su familia, o una nueva familia que la adopte y le ofrezca un hogar permanente.",
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%208.jpeg?alt=media&token=bd1b9616-6a7f-4ba5-bb2a-9dbf2979edb1",
     "facts": {
+      "age": "2 años",
       "age": "2",
       "gender": "Hembra",
       "breed": "Yorkshire Terrier",
@@ -232,6 +240,7 @@ const petsData = [
     "description": "Whiskers es un gato de pelaje gris que fue abandonado en el jardín de una casa. Es un gato tranquilo y cariñoso que busca un hogar donde pueda sentirse feliz, seguro y amado. Le encanta descansar al sol y recibir caricias. Aunque fue abandonado, Whiskers sigue siendo amoroso y tranquilo. Lo mejor es que se adapta bien a nuevos entornos. Ideal para aquellas personas que buscan un compañero tranquilo al cual puedan ofrecerle un lugar cómodo, seguro y mucho cariño en su hogar.",
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Gatos%2Fgato%201.jpeg?alt=media&token=ded925e1-3588-4972-944d-1985795f3de9",
     "facts": {
+      "age": "4 años",
       "age": "4",
       "gender": "Macho",
       "breed": "Maine Coon",
@@ -250,6 +259,7 @@ const petsData = [
     "description": "Luna es una hermosa gata pequeña con pelaje blanco y ojos azules que fue abandonada en la calle. Es dulce, tierna y cariñosa, ideal para una familia que busque una gata afectuosa que se adapte sin problemas a su hogar. Luna disfruta de las caricias en las orejas y es muy juguetona. Está buscando un hogar donde pueda recibir el amor y cuidado que necesita para sentirse segura. Su tamaño compacto y su naturaleza amigable la hacen perfecta para apartamentos o casas pequeñas.",
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Gatos%2Fgato%202.jpeg?alt=media&token=ed838caa-a4eb-42ed-93dc-ee06ecf290b2",
     "facts": {
+      "age": "2 años",
       "age": "2",
       "gender": "Hembra",
       "breed": "Siamés",
@@ -268,7 +278,8 @@ const petsData = [
     "description": "Simba es un gato mediano con pelaje atigrado que fue dejado en un refugio. Es un gato amable, juguetón y cariñoso que está esperando por una familia amorosa. Simba es muy independiente todo el tiempo pero disfruta de la compañía humana y es perfecto para aquellos que buscan un compañero tranquilo y amoroso. Necesita un bello hogar donde pueda recibir el cuidado adecuado, completa seguridad y un lugar cómodo para descansar. Su tamaño y comportamiento calmado lo hacen ideal para diferentes tipos de hogares.",
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Gatos%2Fgato%203.jpeg?alt=media&token=944c9f5c-49cf-4d4f-9c5b-d3ac34b2b6f0",
     "facts": {
-      "age": "10",
+      "age": "5 años",
+      "age": "5",
       "gender": "Macho",
       "breed": "Bengalí",
       "size": "Mediano",

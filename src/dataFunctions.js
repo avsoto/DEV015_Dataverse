@@ -1,10 +1,11 @@
-/*Manipulación de datos*/
+/* Manipulación de datos */
 import petsData from './data/dataset.js';
 
 const dataFunctions = {
 
-  showPets: () => {
+  /* Mostrar Tarjetas */
 
+  showPets: () => {
     if(Array.isArray(petsData)){
       return petsData;
     }
@@ -13,21 +14,58 @@ const dataFunctions = {
     }
   },
 
-  //filterData(array de objetos, variable por la que se filtrará, valor mínimo que un dato puede tener para ser incluido, valor máximo)
+  //------------------ Filtro de Datos ------------------//
+
+  // Filtro Tipo //
+
+  filterDataByType: (petsData,filterBy,value)=> {
+    return petsData.filter(petType => petType[filterBy] === value)
+  },
+
+  // Filtro Edad //
+
   filterData(petsData,filterBy, minValue, maxValue){
-    //método filter = crea un nuevo array solo con los que cumplen
     return petsData.filter(pet => {
-      // valorFiltrado = pet.facts[age] ( age -> valor específico que queremos filtrar)
+
       const valorFiltrado = pet.facts[filterBy];
-      //23 determina si el valor extraido está dentro del rango especificado
-      // Si está dentro, se agrega al nuevo array
+
       return valorFiltrado >= minValue && valorFiltrado <= maxValue;
     })
+  },
+
+  //Filtro Género //
+
+  filterDataByGender: (petsData,filterBy,value)=> {
+    return petsData.filter(petGender => petGender.facts[filterBy] === value)
+  },
+
+  //Filtro Tamaño //
+
+  filterDataBySize: (petsData,filterBy,value)=> {
+    return petsData.filter(petSize => petSize.facts[filterBy] === value)
+  },
+
+  //Filtro Tamaño //
+
+  orderByNameAsc: (petsData)=> {
+    return petsData.sort((a,b)=> {return (a.name > b.name) ? 1 : -1 });
+  },
+
+  orderByNameDesc: (petsData)=> {
+    return petsData.sort((a,b)=> {return (a.name < b.name) ? 1 : -1 });
+
   }
-
-
-
 
 }
 
+
+
 export default dataFunctions;
+
+
+
+
+
+
+
+

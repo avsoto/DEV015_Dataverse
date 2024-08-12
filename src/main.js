@@ -2,6 +2,12 @@ import { renderItems } from './view.js';
 import dataFunctions from './dataFunctions.js';
 import petsData from './data/dataset.js';
 
+//------------------ Botones principales ------------------//
+
+/*Botón para abrir y cerrar Sidebar */
+
+const root = document.getElementById('root')
+
 window.onload=function(){
   const menuBtn = document.querySelector('.menu-btn')
   const btnCloseIcon = document.querySelector('.btn-close i')
@@ -14,74 +20,82 @@ window.onload=function(){
   btnCloseIcon.onclick = function(){
     dropDownMenu.classList.remove('active')
   }
-
 }
 
-/*BOTÓN QUE DESLIZA LOS FILTROS*/
-const buttonFilters = document.querySelector('.boton-filtros');
-buttonFilters.addEventListener("click", () => {
-  /**
-   * https://www.estudionexos.com/post/efecto-slide-con-css-selectores-y-transiciones/
-   * https://siongui.github.io/2017/02/27/css-only-toggle-dom-element/
-   */
-})
 
+// Botón Conócelos //
+
+const btnConocelos = document.querySelector('#conocelos-btn')
+const sectionTarjetas = document.querySelector('#tarjetas-section')
+
+btnConocelos.addEventListener('click', () => {
+  sectionTarjetas.scrollIntoView({
+    behavior: 'smooth'
+  });
+});
+
+
+// Botón aparecer Filtros //
+
+document.querySelector('.boton-filtros').addEventListener('click', function () {
+  const botones = document.querySelector('.mascotas-filtros');
+  if (botones.style.display === 'none') {
+    botones.style.display = 'block';
+  }
+  else {
+    botones.style.display = 'none';
+  }
+});
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const root = document.getElementById('root');
   const pets = dataFunctions.showPets();
+  root.appendChild( renderItems(pets));
+})
 
-  root.appendChild(renderItems(pets));
+
+//------------ Sección tarjetas - Funciones de Filtrado y Botón Limpiar ------------//
+
+
+// Filtro Tipo //
+
+const selectTipo = document.querySelector('#tipo');
+
+selectTipo.addEventListener('change', (event) => {
+  const valorElegido = event.target.value;
+  let resultado;
+  if (valorElegido === "Perro")  {
+    root.innerHTML = ''
+    resultado = dataFunctions.filterDataByType(petsData,'type',valorElegido.toLowerCase());
+  }
+  else if (valorElegido === "Gato") {
+    root.innerHTML = ''
+    resultado = dataFunctions.filterDataByType(petsData, 'type',valorElegido.toLowerCase());
+  }
+  root.appendChild(renderItems(resultado))
 
 })
 
 
-/*Funciones*/
+// Filtro Edad //
 
-
-
-//FILTRAR POR EDAD
 const selectAge = document.getElementById('edad');
 selectAge.addEventListener("change", () => {
   const root = document.getElementById('root');
   const edadSeleccionada = selectAge.value;
   let resultado;
-  // Definir un mapa de rangos de edad
+
+  // Definiendo un mapa de rangos de edad //
+
   const ageRanges = {
     'cachorro': [0, 4],
     'adulto': [5, 9],
     'mayor': [10, 20]
   };
 
-  /* Si existe dentro del rango de edad, ejecuta la funcion para filtrar tarjetas
-   Si seleccione de aquí "cachorro", entonces se pregunta ageRanges[cachorro] existe?
-    <label for="edad"></label>
-    <select id="edad" name="elegir">
-      <option value="asc" selected>Edad</option>
-      <option value="asc">Cachorro</option>
-      <option value="desc">Adulto</option>
-      <option value="desc">Mayor</option>
-    </select>
-  */
-
   if (ageRanges[edadSeleccionada]) {
     root.innerHTML = "";
-    // Si existe, extrae el mínimo y máximo de edad del rango seleccionado usando Desestructuración de arrays
-    /*
-      La desestructuración de arrays permite extraer valores de un array y asignarlos a variables en una sola línea.
-      const array = [1, 2, 3];
-      const [a, b, c] = array;
 
-      console.log(a); // 1
-      console.log(b); // 2
-      console.log(c); // 3
-
-      En el código siguiente:
-      const range = ageRanges[edadSeleccionada];
-      const minAge = range[0];
-      const maxAge = range[1];
-    */
     const [minAge, maxAge] = ageRanges[edadSeleccionada];
     resultado = dataFunctions.filterData(petsData, 'age', minAge, maxAge);
   } else {
@@ -92,32 +106,82 @@ selectAge.addEventListener("change", () => {
   root.appendChild(renderItems(resultado));
 
 
-  /* PRIMER ESBOZO DE LA FUNCIÓN
+  // Filtro Género //
 
-  if(edadSeleccionada === 'cachorro'){
+  const selectGenero = document.querySelector('#genero');
+
+  selectGenero.addEventListener('change', (event) => {
+    const valorElegido = event.target.value;
+    let resultado;
+
+    if (valorElegido === "Macho" || valorElegido === "Hembra")  {
+      root.innerHTML = ''
+      resultado = dataFunctions.filterDataByGender(petsData,'gender', valorElegido);
+    }
+
+    root.appendChild(renderItems(resultado))
+
+  });
+
+
+  //Filtro Tamaño //
+
+  const selectTamaño = document.querySelector('#tamaño');
+  selectTamaño.addEventListener('change', (event) => {
+    const valorElegido = event.target.value;
+    let resultado;
+
+    if (valorElegido === "Pequeño" || valorElegido === "Mediano" || valorElegido === "Grande")  {
+      root.innerHTML = ''
+      resultado = dataFunctions.filterDataBySize(petsData,'size', valorElegido);
+    }
+
+    root.appendChild(renderItems(resultado))
+
+  });
+
+
+  // Botón Limpiar //
+
+  const botonLimpiar = document.querySelector('#btn-limpiar');
+  botonLimpiar.addEventListener('click', (event) => {
+    const pets = event.dataFunctions.showPets();
+
+    selectTipo.value = "";
+    selectGenero.value = "";
+    selectAge.value = "";
+    selectTamaño.value = "";
+
     root.innerHTML = "";
-    const resultado = dataFunctions.filterData(petsData,'age',0, 4);
-    root.appendChild(renderItems(resultado));
-  } else if (edadSeleccionada === 'adulto'){
-    root.innerHTML = "";
-    const resultado = dataFunctions.filterData(petsData,'age',5, 9);
-    root.appendChild(renderItems(resultado));
-  } else if(edadSeleccionada === 'mayor'){
-    root.innerHTML = "";
-    const resultado = dataFunctions.filterData(petsData,'age',10, 20);
-    root.appendChild(renderItems(resultado));
-  } else {
-    root.innerHTML = "";
-    const pets = dataFunctions.showPets();
     root.appendChild(renderItems(pets));
-  }
 
-*/
+  });
+
+
+
 
 })
 
+// Filtro Ordenar Alfabéticamente //
 
 
+const inputsOrden = document.querySelectorAll('#orden > input');
+
+inputsOrden.forEach ( (e)=>{
+  e.addEventListener('change', (event) => {
+    const valorElegido = event.target.value;
+    let resultado;
+    if (valorElegido === "asc")  {
+      root.innerHTML = ''
+      resultado = dataFunctions.orderByNameAsc(petsData);
+    }
+    else if (valorElegido === "desc") {
+      root.innerHTML = ''
+      resultado = dataFunctions.orderByNameDesc(petsData);
+    }
+    root.appendChild(renderItems(resultado))
+
+  })
 
 
-
+})

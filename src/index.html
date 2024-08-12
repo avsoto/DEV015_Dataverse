@@ -75,18 +75,16 @@
     </section>
 <!-- Desktop Tarjetas -->
 
-    <section class="mascotas-container">
+    <section class="mascotas-container" id="tarjetas-section">
 
       <div class="mascotas-barra">
         <ul class="opciones-mascota">
           <li class="boton-filtros"><i class="fa-solid fa-bars" id="bars-2"></i>Filtros</li>
-          <label for="ordenar">Ordenar por: </label>
-            <select id="ordenar" name="ordenar" data-testid="select-sort">
-              <option value="asc" selected>A-Z</option>
-              <option value="desc">Z-A</option>
-            </select>
-          <li>
-            <button id="btn-limpiar">Limpiar</button>
+            <label id="orden"> Ordenar por:
+                <input id="asc" type="radio" name="sort-order" value="asc" ><i class="fa-solid fa-arrow-down-a-z" style="color: #ed8a0a;"></i>
+                <input id="desc" type="radio" name="sort-order" value="desc"><i class="fa-solid fa-arrow-up-a-z" style="color: #ed8a0a;"></i>
+            </label>
+            <button id="btn-estadísticas">Estadísticas</button>
           </li>
         </ul>
       </div>
@@ -94,35 +92,38 @@
       <div class="mascotas-filtros">
         <label for="tipo"></label>
           <select id="tipo" name="elegir" data-testid="select-filter">
-            <option value="Tipo" selected>Tipo</option>
+            <option value="Tipo" disabled selected hidden>Tipo</option>
             <option value="Perro">Perro</option>
             <option value="Gato">Gato</option>
           </select>
 
           <label for="edad"></label>
           <select id="edad" name="elegir">
-            <option value="" disabled selected hidden>Edad</option>
-            <option value="cachorro">Cachorro</option>
-            <option value="adulto">Adulto</option>
-            <option value="mayor">Mayor</option>
+            <option value="Edad" disabled selected hidden>Edad</option>
+            <option value="Cachorro">Cachorro</option>
+            <option value="Adulto">Adulto</option>
+            <option value="Mayor">Mayor</option>
           </select>
 
           <label for="genero"></label>
           <select id="genero" name="elegir">
-            <option value="asc" selected>Género</option>
-            <option value="asc" selected>Macho</option>
-            <option value="desc">Hembra</option>
+            <option value="Genero" disabled selected hidden>Género</option>
+            <option value="Macho">Macho</option>
+            <option value="Hembra">Hembra</option>
           </select>
 
           <label for="tamaño"></label>
           <select id="tamaño" name="elegir">
-            <option value="asc" selected>Tamaño</option>
-            <option value="asc" selected>Pequeño</option>
-            <option value="desc">Mediano</option>
-            <option value="desc">Grande</option>
+            <option value="Tamaño" disabled selected hidden>Tamaño</option>
+            <option value="Pequeño">Pequeño</option>
+            <option value="Mediano">Mediano</option>
+            <option value="Grande">Grande</option>
           </select>
 
-      </div>
+          <div>
+          <button id="btn-limpiar">Limpiar</button>
+          </div>
+        </div>
       <section class="mascotas-tarjetas">
         <h2 class="nuestras-mascotas">
           <span>Nuestras</span>

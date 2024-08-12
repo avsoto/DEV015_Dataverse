@@ -19,7 +19,7 @@ export const renderItems = (pets) => {
                           <div itemprop="breed">Raza: ${pet.facts.breed}</div>
                           <div itemprop="size">Tamaño: ${pet.facts.size}</div>
                           <div itemprop="temperament">Comportamiento: ${pet.facts.temperament}</div>
-                        </ul>    
+                        </ul>
                       `;
     ul.appendChild(petItem);
   });
