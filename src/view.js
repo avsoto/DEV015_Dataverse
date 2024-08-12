@@ -7,6 +7,19 @@ export const renderItems = (pets) => {
     petItem.className = "tarjeta";
     petItem.setAttribute('itemscope','');
     petItem.setAttribute('itemtype','http://schema.org/Pet');
+
+    // Convertir la edad a meses
+    const { years, months } = pet.facts.age;
+    const totalMonths = (years * 12) + months;
+
+    let ageDisplay;
+    if (totalMonths < 12) {
+      ageDisplay = `${months} mes(es)`;
+    } else {
+      ageDisplay = `${years} año(s)`;
+    }
+
+
     // Usar la función para obtener el HTML
     petItem.innerHTML = `
                           <div itemprop="tarjeta-img">
@@ -14,12 +27,12 @@ export const renderItems = (pets) => {
                           </div>
                           <div itemprop="name">${pet.name}</div>
                           <div itemprop="description">${pet.shortDescription}</div>
-                          <div itemprop="age">Edad: ${pet.facts.age}</div>
+                          <div itemprop="age">Edad: ${ageDisplay}</div>
                           <div itemprop="gender">Género: ${pet.facts.gender}</div>
                           <div itemprop="breed">Raza: ${pet.facts.breed}</div>
                           <div itemprop="size">Tamaño: ${pet.facts.size}</div>
                           <div itemprop="temperament">Comportamiento: ${pet.facts.temperament}</div>
-                        </ul>    
+                        </ul>
                       `;
     ul.appendChild(petItem);
   });
@@ -28,3 +41,4 @@ export const renderItems = (pets) => {
   return ul;
 };
 
+export default renderItems;

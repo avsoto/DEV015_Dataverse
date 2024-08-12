@@ -32,7 +32,7 @@ body{
   .navbar-options {
     display: none;
     gap: 0;
-  } 
+  }
 }
 
 nav {
@@ -309,7 +309,7 @@ select[name='elegir'] {
   color:#ffffff;
   text-align: center;
   font-family: 'Josefin Sans';
-  font-size: 1.3em;  
+  font-size: 1.3em;
 }
 
 .mascotas-filtros {
@@ -400,7 +400,7 @@ select[name='elegir'] {
   }
 
 #root li{
-  margin-top: 2em;
+  margin-top: 0.5em;
   z-index: 1500;
 }
 
@@ -639,7 +639,7 @@ li {
     text-align: right;
     margin-right: 10%;
     margin-top: 20px;
-    z-index: 20; 
+    z-index: 20;
 }
 
 .derecha h1 {
@@ -804,7 +804,7 @@ select[name='elegir'] {
   color:#ffffff;
   text-align: center;
   font-family: 'Josefin Sans';
-  font-size: 1.1em;  
+  font-size: 1.1em;
 }
 
 .mascotas-filtros {
@@ -899,7 +899,7 @@ select[name='elegir'] {
   }
 
 #root li{
-  margin-top: 2em;
+  margin-top: 0.5em;
   z-index: 1500;
 }
 
