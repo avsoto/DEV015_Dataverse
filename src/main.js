@@ -2,11 +2,14 @@ import { renderItems } from './view.js';
 import dataFunctions from './dataFunctions.js';
 import petsData from './data/dataset.js';
 
+const { showPets, filterDataByType, filterDataByAge, filterDataByValue, orderPetsBy } = dataFunctions;
+
 //------------------ Botones principales ------------------//
 
 /*Botón para abrir y cerrar Sidebar */
 
 const root = document.getElementById('root')
+let resultado = [];
 
 window.onload=function(){
   const menuBtn = document.querySelector('.menu-btn')
@@ -49,7 +52,7 @@ document.querySelector('.boton-filtros').addEventListener('click', function () {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const pets = dataFunctions.showPets();
+  const pets = showPets();
   root.appendChild( renderItems(pets));
 })
 
@@ -63,17 +66,9 @@ const selectTipo = document.querySelector('#tipo');
 
 selectTipo.addEventListener('change', (event) => {
   const valorElegido = event.target.value;
-  let resultado;
-  if (valorElegido === "Perro")  {
-    root.innerHTML = ''
-    resultado = dataFunctions.filterDataByType(petsData,'type',valorElegido.toLowerCase());
-  }
-  else if (valorElegido === "Gato") {
-    root.innerHTML = ''
-    resultado = dataFunctions.filterDataByType(petsData, 'type',valorElegido.toLowerCase());
-  }
-  root.appendChild(renderItems(resultado))
-
+  root.innerHTML = '';
+  resultado = filterDataByType(petsData,'type',valorElegido.toLowerCase());
+  root.appendChild(renderItems(resultado));
 })
 
 
@@ -81,107 +76,100 @@ selectTipo.addEventListener('change', (event) => {
 
 const selectAge = document.getElementById('edad');
 selectAge.addEventListener("change", () => {
-  const root = document.getElementById('root');
-  const edadSeleccionada = selectAge.value;
+  const valorElegido = selectAge.value;
   let resultado;
 
   // Definiendo un mapa de rangos de edad //
 
   const ageRanges = {
-    'cachorro': [0, 4],
-    'adulto': [5, 9],
-    'mayor': [10, 20]
+    'Cachorro': [0, 12],
+    'Adulto': [13, 119],
+    'Mayor': [120, 240]
   };
 
-  if (ageRanges[edadSeleccionada]) {
+  if (ageRanges[valorElegido]) {
     root.innerHTML = "";
 
-    const [minAge, maxAge] = ageRanges[edadSeleccionada];
-    resultado = dataFunctions.filterData(petsData, 'age', minAge, maxAge);
-  } else {
-    root.innerHTML = "";
-    resultado = dataFunctions.showPets();
+    const [minAge, maxAge] = ageRanges[valorElegido];
+    resultado = filterDataByAge(petsData, 'age', minAge, maxAge);
+    console.log('Resultado después del filtro por edad:', resultado); // Verifica el resultado aquí
+
   }
 
   root.appendChild(renderItems(resultado));
-
-
-  // Filtro Género //
-
-  const selectGenero = document.querySelector('#genero');
-
-  selectGenero.addEventListener('change', (event) => {
-    const valorElegido = event.target.value;
-    let resultado;
-
-    if (valorElegido === "Macho" || valorElegido === "Hembra")  {
-      root.innerHTML = ''
-      resultado = dataFunctions.filterDataByGender(petsData,'gender', valorElegido);
-    }
-
-    root.appendChild(renderItems(resultado))
-
-  });
-
-
-  //Filtro Tamaño //
-
-  const selectTamaño = document.querySelector('#tamaño');
-  selectTamaño.addEventListener('change', (event) => {
-    const valorElegido = event.target.value;
-    let resultado;
-
-    if (valorElegido === "Pequeño" || valorElegido === "Mediano" || valorElegido === "Grande")  {
-      root.innerHTML = ''
-      resultado = dataFunctions.filterDataBySize(petsData,'size', valorElegido);
-    }
-
-    root.appendChild(renderItems(resultado))
-
-  });
-
-
-  // Botón Limpiar //
-
-  const botonLimpiar = document.querySelector('#btn-limpiar');
-  botonLimpiar.addEventListener('click', (event) => {
-    const pets = event.dataFunctions.showPets();
-
-    selectTipo.value = "";
-    selectGenero.value = "";
-    selectAge.value = "";
-    selectTamaño.value = "";
-
-    root.innerHTML = "";
-    root.appendChild(renderItems(pets));
-
-  });
-
-
-
-
 })
+
+// Filtro Género //
+
+const selectGenero = document.querySelector('#genero');
+
+selectGenero.addEventListener('change', (event) => {
+  const valorElegido = event.target.value;
+  root.innerHTML = '';
+  resultado = filterDataByValue(petsData,'gender', valorElegido);
+  root.appendChild(renderItems(resultado))
+});
+
+
+//Filtro Tamaño //
+
+const selectTamaño = document.querySelector('#tamaño');
+selectTamaño.addEventListener('change', (event) => {
+  const valorElegido = event.target.value;
+  root.innerHTML = '';
+  resultado = filterDataByValue(petsData,'size', valorElegido);
+  root.appendChild(renderItems(resultado))
+
+});
+
+
+// Botón Limpiar //
+
+const botonLimpiar = document.querySelector('#btn-limpiar');
+botonLimpiar.addEventListener('click', () => {
+  const pets = showPets();
+  root.innerHTML = "";
+
+  //Restablecer los selects
+  selectTipo.value = "Tipo";
+  selectGenero.value = "Genero";
+  selectAge.value = "Edad";
+  selectTamaño.value = "Tamaño";
+
+  //Limpiar los radio buttons
+  botonOrdenarAsc.checked = false;
+  botonOrdenarDesc.checked = false;
+
+  resultado = pets;
+
+  root.appendChild(renderItems(pets));
+});
+
 
 // Filtro Ordenar Alfabéticamente //
 
+const botonOrdenarAsc = document.querySelector('#asc');
+botonOrdenarAsc.addEventListener("click", function(){
+  root.innerHTML = ""
+  console.log('Resultado antes de ordenar ascendente:', resultado);
 
-const inputsOrden = document.querySelectorAll('#orden > input');
+  const valorElegido = botonOrdenarAsc.value;
 
-inputsOrden.forEach ( (e)=>{
-  e.addEventListener('change', (event) => {
-    const valorElegido = event.target.value;
-    let resultado;
-    if (valorElegido === "asc")  {
-      root.innerHTML = ''
-      resultado = dataFunctions.orderByNameAsc(petsData);
-    }
-    else if (valorElegido === "desc") {
-      root.innerHTML = ''
-      resultado = dataFunctions.orderByNameDesc(petsData);
-    }
-    root.appendChild(renderItems(resultado))
-
-  })
-
+  const ordenarPetsData = orderPetsBy(resultado,'name',valorElegido);
+  console.log('Resultado después del ordenamiento ascendente:', ordenarPetsData);
+  root.appendChild(renderItems(ordenarPetsData))
 
 })
+
+const botonOrdenarDesc= document.querySelector('#desc');
+botonOrdenarDesc.addEventListener("click", function(){
+  root.innerHTML = "";
+  console.log('Resultado antes de ordenar descendente:', resultado);
+
+  const valorElegido = botonOrdenarDesc.value;
+  const ordenarPetsData = orderPetsBy(resultado,'name',valorElegido);
+  console.log('Resultado después del ordenamiento descendente:', ordenarPetsData);
+  root.appendChild(renderItems(ordenarPetsData))
+})
+
+

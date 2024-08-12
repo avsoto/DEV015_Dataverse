@@ -24,41 +24,36 @@ const dataFunctions = {
 
   // Filtro Edad //
 
-  filterData(petsData,filterBy, minValue, maxValue){
+  filterDataByAge: (petsData,filterBy, minValue, maxValue) => {
     return petsData.filter(pet => {
+      const { years, months } = pet.facts[filterBy];
+      // Convertir la edad total a meses
+      const totalMonths = (years * 12) + months;
 
-      const valorFiltrado = pet.facts[filterBy];
-
-      return valorFiltrado >= minValue && valorFiltrado <= maxValue;
+      return totalMonths >= minValue && totalMonths <= maxValue;
     })
   },
 
-  //Filtro Género //
+  //Filtro Género y Tamaño//
 
-  filterDataByGender: (petsData,filterBy,value)=> {
-    return petsData.filter(petGender => petGender.facts[filterBy] === value)
+  filterDataByValue: (petsData,filterBy,value)=> {
+    return petsData.filter(petFilteredBy => petFilteredBy.facts[filterBy] === value)
   },
 
-  //Filtro Tamaño //
+  //Ordenamientos//
 
-  filterDataBySize: (petsData,filterBy,value)=> {
-    return petsData.filter(petSize => petSize.facts[filterBy] === value)
+  orderPetsBy: (petsData, sortBy, sortOrder)=> {
+    return petsData.sort((a, z) => {
+
+      if (a[sortBy] > z[sortBy]) {
+        return sortOrder === "asc" ? 1 : -1;
+      } else if (a[sortBy] < z[sortBy]) {
+        return sortOrder === "asc" ? -1 : 1;
+      }
+    });
+
   },
-
-  //Filtro Tamaño //
-
-  orderByNameAsc: (petsData)=> {
-    return petsData.sort((a,b)=> {return (a.name > b.name) ? 1 : -1 });
-  },
-
-  orderByNameDesc: (petsData)=> {
-    return petsData.sort((a,b)=> {return (a.name < b.name) ? 1 : -1 });
-
-  }
-
 }
-
-
 
 export default dataFunctions;
 
