@@ -14,7 +14,7 @@ describe('filterDataByType', () => {
 
 describe('filterDataByAge', () => {
   it('returns `filterDataByAge` ', () => {
-    const pruebatipo = dataFunctions.filterDataByAge(data,'age', 'Cachorro')
+    const pruebatipo = dataFunctions.filterDataByAge(data,'age', 'minAge, maxAge')
     expect(pruebatipo.length).toBe(2);
   });
 });
@@ -36,6 +36,8 @@ describe('filterDataByValue', () => {
     expect(pruebatipo.length).toBe(2);
   });
 });
+
+// Test Ordenamiento de Tipo //
 
 describe('orderPetsBy', () => {
 
@@ -65,27 +67,6 @@ describe('orderPetsBy', () => {
         }
       },
       {
-        "id": "perro-abandonado-001",
-        "name": "Rex",
-        "type": "perro",
-        "shortDescription": "Perro grande y amistoso, abandonado en el parque.",
-        "description": "Rex es un perro grande con pelaje marrón y ojos alegres. Abandonado en el parque local, Rex busca una nueva familia que le brinde el amor y la atención que merece. Es un perro muy enérgico que disfruta jugar con pelotas y correr en el jardín. Ideal para quienes disfrutan de actividades al aire libre y buscan un compañero leal. Rex necesita mucho ejercicio y atención, por lo que es perfecto para familias activas que puedan ofrecerle el espacio y cariño necesarios para que se desarrolle felizmente.",
-        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%201.jpeg?alt=media&token=0aa405af-4449-48f1-95dc-f3326dd5325f",
-        "facts": {
-          "age": {
-            "years": 9,
-            "months": 2
-          },
-          "gender": "Macho",
-          "breed": "Labrador Retriever",
-          "size": "Grande",
-          "temperament": "Enérgico"
-        },
-        "extraInfo": {
-          "curiosities": "Le encanta nadar en el lago."
-        }
-      },
-      {
         "id": "perro-perdido-001",
         "name": "Max",
         "type": "perro",
@@ -104,6 +85,27 @@ describe('orderPetsBy', () => {
         },
         "extraInfo": {
           "curiosities": "Sabe hacer trucos básicos como dar la pata."
+        }
+      },
+      {
+        "id": "perro-abandonado-001",
+        "name": "Rex",
+        "type": "perro",
+        "shortDescription": "Perro grande y amistoso, abandonado en el parque.",
+        "description": "Rex es un perro grande con pelaje marrón y ojos alegres. Abandonado en el parque local, Rex busca una nueva familia que le brinde el amor y la atención que merece. Es un perro muy enérgico que disfruta jugar con pelotas y correr en el jardín. Ideal para quienes disfrutan de actividades al aire libre y buscan un compañero leal. Rex necesita mucho ejercicio y atención, por lo que es perfecto para familias activas que puedan ofrecerle el espacio y cariño necesarios para que se desarrolle felizmente.",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%201.jpeg?alt=media&token=0aa405af-4449-48f1-95dc-f3326dd5325f",
+        "facts": {
+          "age": {
+            "years": 9,
+            "months": 2
+          },
+          "gender": "Macho",
+          "breed": "Labrador Retriever",
+          "size": "Grande",
+          "temperament": "Enérgico"
+        },
+        "extraInfo": {
+          "curiosities": "Le encanta nadar en el lago."
         }
       },
     ]
