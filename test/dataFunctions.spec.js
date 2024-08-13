@@ -1,23 +1,47 @@
 import dataFunctions from '../src/dataFunctions.js';
 import { data } from './data.js';
 
-const { filterDataByType, orderPetsBy } = dataFunctions;
-
-//console.log(fakeData);
-
+// Test Filtro Type //
 
 describe('filterDataByType', () => {
-  it('should return 12 dogs', () => {
-    const pruebatipo = filterDataByType(data,'type','perro')
+  it('returns `filterDataByType` ', () => {
+    const pruebatipo = dataFunctions.filterDataByType(data,'type','perro')
     expect(pruebatipo.length).toBe(3);
+  });
+});
+
+// Test Flitro Edad //
+
+describe('filterDataByAge', () => {
+  it('returns `filterDataByAge` ', () => {
+    const pruebatipo = dataFunctions.filterDataByAge(data,'age', 'Cachorro')
+    expect(pruebatipo.length).toBe(2);
+  });
+});
+
+// Test Flitro Género //
+
+describe('filterDataByValue', () => {
+  it('returns `filterDataByValue` ', () => {
+    const pruebatipo = dataFunctions.filterDataByValue(data,'gender', 'Macho')
+    expect(pruebatipo.length).toBe(4);
+  });
+});
+
+// Test Flitro Tamaño //
+
+describe('filterDataByValue', () => {
+  it('returns `filterDataByValue` ', () => {
+    const pruebatipo = dataFunctions.filterDataByValue(data,'size', 'Grande')
+    expect(pruebatipo.length).toBe(2);
   });
 });
 
 describe('orderPetsBy', () => {
 
   it ('should return a list order by name according to the alphabet', () => {
-    const pruebatipo = filterDataByType(data,'type','perro')
-    const orderby = orderPetsBy(pruebatipo,'name','asc')
+    const pruebatipo = dataFunctions.filterDataByType(data,'type','perro') //de acuerdo a posiciones
+    const orderby = dataFunctions.orderPetsBy(pruebatipo,'name','asc')
     const expected = [
       {
         "id": "perro-cria-002",
