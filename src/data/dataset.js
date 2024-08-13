@@ -185,6 +185,7 @@ const petsData = [
         "years": 4,
         "months": 2
       },
+      "gender": "Macho",
       "breed": "Beagle",
       "size": "Pequeño",
       "temperament": "Curioso"
