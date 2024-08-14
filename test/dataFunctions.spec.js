@@ -10,12 +10,26 @@ describe('filterDataByType', () => {
   });
 });
 
+describe('filterDataByType', () => {
+  it('returns `filterDataByType` ', () => {
+    const pruebatipo = dataFunctions.filterDataByType(data,'type','gato')
+    expect(pruebatipo.length).toBe(3);
+  });
+});
+
 // Test Flitro Edad //
 
 describe('filterDataByAge', () => {
   it('returns `filterDataByAge` ', () => {
     const pruebatipo = dataFunctions.filterDataByAge(data,'age', '0', '12')
     expect(pruebatipo.length).toBe(2);
+  });
+});
+
+describe('filterDataByAge', () => {
+  it('returns `filterDataByAge` ', () => {
+    const pruebatipo = dataFunctions.filterDataByAge(data,'age', '13', '119')
+    expect(pruebatipo.length).toBe(4);
   });
 });
 
@@ -28,11 +42,25 @@ describe('filterDataByValue', () => {
   });
 });
 
+describe('filterDataByValue', () => {
+  it('returns `filterDataByValue` ', () => {
+    const pruebatipo = dataFunctions.filterDataByValue(data,'gender', 'Hembra')
+    expect(pruebatipo.length).toBe(2);
+  });
+});
+
 // Test Flitro Tamaño //
 
 describe('filterDataByValue', () => {
   it('returns `filterDataByValue` ', () => {
     const pruebatipo = dataFunctions.filterDataByValue(data,'size', 'Grande')
+    expect(pruebatipo.length).toBe(2);
+  });
+});
+
+describe('filterDataByValue', () => {
+  it('returns `filterDataByValue` ', () => {
+    const pruebatipo = dataFunctions.filterDataByValue(data,'size', 'Mediano')
     expect(pruebatipo.length).toBe(2);
   });
 });

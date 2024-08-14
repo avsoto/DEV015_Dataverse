@@ -123,7 +123,7 @@ export const data = [
       },
       "gender": "Hembra",
       "breed": "Persa",
-      "size": "Pequeña",
+      "size": "Pequeño",
       "temperament": "Dulce"
     },
     "extraInfo": {
