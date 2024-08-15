@@ -381,7 +381,7 @@ const petsData = [
       },
       "gender": "Hembra",
       "breed": "Maine Coon",
-      "size": "Mediana",
+      "size": "Mediano",
       "temperament": "Amigable"
     },
     "extraInfo": {
@@ -423,7 +423,7 @@ const petsData = [
       },
       "gender": "Hembra",
       "breed": "Siberiano",
-      "size": "Mediana",
+      "size": "Mediano",
       "temperament": "Amigable"
     },
     "extraInfo": {

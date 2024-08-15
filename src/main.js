@@ -9,7 +9,6 @@ const { showPets, filterDataByType, filterDataByAge, filterDataByValue, orderPet
 /*Botón para abrir y cerrar Sidebar */
 
 const root = document.getElementById('root')
-let resultado = [];
 
 window.onload=function(){
   const menuBtn = document.querySelector('.menu-btn')
@@ -59,44 +58,70 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //------------ Sección tarjetas - Funciones de Filtrado y Botón Limpiar ------------//
 
+// Estado de los filtros
+const filtros = {
+  tipo: null,
+  edad: null,
+  genero: null,
+  tamaño: null
+};
+
+function aplicarFiltros(datos) {
+  let resultados = datos;
+
+  // Filtro por tipo
+  if (filtros.tipo) {
+    resultados = filterDataByType(resultados, 'type', filtros.tipo.toLowerCase());
+  }
+
+  // Filtro por edad
+  if (filtros.edad) {
+    const ageRanges = {
+      'Cachorro': [0, 12],
+      'Adulto': [13, 119],
+      'Mayor': [120, 240]
+    };
+
+    const [minAge, maxAge] = ageRanges[filtros.edad];
+    resultados = filterDataByAge(resultados, 'age', minAge, maxAge);
+  }
+
+  // Filtro por género
+  if (filtros.genero) {
+    resultados = filterDataByValue(resultados, 'gender', filtros.genero);
+  }
+
+  // Filtro por tamaño
+  if (filtros.tamaño) {
+    resultados = filterDataByValue(resultados, 'size', filtros.tamaño);
+  }
+
+  return resultados;
+}
+
+// Aplicar filtros y actualizar la vista
+function actualizarVista() {
+  root.innerHTML = '';
+  const resultadosFiltrados = aplicarFiltros(petsData);
+  root.appendChild(renderItems(resultadosFiltrados));
+}
 
 // Filtro Tipo //
 
 const selectTipo = document.querySelector('#tipo');
 
 selectTipo.addEventListener('change', (event) => {
-  const valorElegido = event.target.value;
-  root.innerHTML = '';
-  resultado = filterDataByType(petsData,'type',valorElegido.toLowerCase());
-  root.appendChild(renderItems(resultado));
-})
+  filtros.tipo = event.target.value;
+  actualizarVista();
+});
 
 
 // Filtro Edad //
 
 const selectAge = document.getElementById('edad');
 selectAge.addEventListener("change", () => {
-  const valorElegido = selectAge.value;
-  let resultado;
-
-  // Definiendo un mapa de rangos de edad //
-
-  const ageRanges = {
-    'Cachorro': [0, 12],
-    'Adulto': [13, 119],
-    'Mayor': [120, 240]
-  };
-
-  if (ageRanges[valorElegido]) {
-    root.innerHTML = "";
-
-    const [minAge, maxAge] = ageRanges[valorElegido];
-    resultado = filterDataByAge(petsData, 'age', minAge, maxAge);
-    console.log('Resultado después del filtro por edad:', resultado); // Verifica el resultado aquí
-
-  }
-
-  root.appendChild(renderItems(resultado));
+  filtros.edad = selectAge.value;
+  actualizarVista();
 })
 
 // Filtro Género //
@@ -104,10 +129,8 @@ selectAge.addEventListener("change", () => {
 const selectGenero = document.querySelector('#genero');
 
 selectGenero.addEventListener('change', (event) => {
-  const valorElegido = event.target.value;
-  root.innerHTML = '';
-  resultado = filterDataByValue(petsData,'gender', valorElegido);
-  root.appendChild(renderItems(resultado))
+  filtros.genero = event.target.value;
+  actualizarVista();
 });
 
 
@@ -115,11 +138,8 @@ selectGenero.addEventListener('change', (event) => {
 
 const selectTamaño = document.querySelector('#tamaño');
 selectTamaño.addEventListener('change', (event) => {
-  const valorElegido = event.target.value;
-  root.innerHTML = '';
-  resultado = filterDataByValue(petsData,'size', valorElegido);
-  root.appendChild(renderItems(resultado))
-
+  filtros.tamaño = event.target.value;
+  actualizarVista();
 });
 
 
@@ -129,6 +149,12 @@ const botonLimpiar = document.querySelector('#btn-limpiar');
 botonLimpiar.addEventListener('click', () => {
   const pets = showPets();
   root.innerHTML = "";
+
+  // Restablecer el estado de los filtros
+  filtros.tipo = null;
+  filtros.edad = null;
+  filtros.genero = null;
+  filtros.tamaño = null;
 
   //Restablecer los selects
   selectTipo.value = "Tipo";
@@ -140,8 +166,6 @@ botonLimpiar.addEventListener('click', () => {
   botonOrdenarAsc.checked = false;
   botonOrdenarDesc.checked = false;
 
-  resultado = pets;
-
   root.appendChild(renderItems(pets));
 });
 
@@ -150,13 +174,10 @@ botonLimpiar.addEventListener('click', () => {
 
 const botonOrdenarAsc = document.querySelector('#asc');
 botonOrdenarAsc.addEventListener("click", function(){
-  root.innerHTML = ""
-  console.log('Resultado antes de ordenar ascendente:', resultado);
-
+  root.innerHTML = "";
+  const resultadosFiltrados = aplicarFiltros(petsData);
   const valorElegido = botonOrdenarAsc.value;
-
-  const ordenarPetsData = orderPetsBy(resultado,'name',valorElegido);
-  console.log('Resultado después del ordenamiento ascendente:', ordenarPetsData);
+  const ordenarPetsData = orderPetsBy(resultadosFiltrados,'name',valorElegido);
   root.appendChild(renderItems(ordenarPetsData))
 
 })
@@ -164,11 +185,9 @@ botonOrdenarAsc.addEventListener("click", function(){
 const botonOrdenarDesc= document.querySelector('#desc');
 botonOrdenarDesc.addEventListener("click", function(){
   root.innerHTML = "";
-  console.log('Resultado antes de ordenar descendente:', resultado);
-
+  const resultadosFiltrados = aplicarFiltros(petsData);
   const valorElegido = botonOrdenarDesc.value;
-  const ordenarPetsData = orderPetsBy(resultado,'name',valorElegido);
-  console.log('Resultado después del ordenamiento descendente:', ordenarPetsData);
+  const ordenarPetsData = orderPetsBy(resultadosFiltrados, 'name', valorElegido);
   root.appendChild(renderItems(ordenarPetsData))
 })
 
