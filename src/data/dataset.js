@@ -36,7 +36,7 @@ const petsData = [
       },
       "gender": "Hembra",
       "breed": "Chihuahua",
-      "size": "Pequeña",
+      "size": "Pequeño",
       "temperament": "Dulce"
     },
     "extraInfo": {
@@ -122,7 +122,7 @@ const petsData = [
       },
       "gender": "Hembra",
       "breed": "Bulldog Francés",
-      "size": "Pequeña",
+      "size": "Pequeño",
       "temperament": "Amigable"
     },
     "extraInfo": {
@@ -164,7 +164,7 @@ const petsData = [
       },
       "gender": "Hembra",
       "breed": "Yorkshire Terrier",
-      "size": "Pequeña",
+      "size": "Pequeño",
       "temperament": "Amigable"
     },
     "extraInfo": {
@@ -295,7 +295,7 @@ const petsData = [
       },
       "gender": "Hembra",
       "breed": "Siamés",
-      "size": "Pequeña",
+      "size": "Pequeño",
       "temperament": "Dulce"
     },
     "extraInfo": {
@@ -381,7 +381,7 @@ const petsData = [
       },
       "gender": "Hembra",
       "breed": "Maine Coon",
-      "size": "Mediana",
+      "size": "Mediano",
       "temperament": "Amigable"
     },
     "extraInfo": {
@@ -423,7 +423,7 @@ const petsData = [
       },
       "gender": "Hembra",
       "breed": "Siberiano",
-      "size": "Mediana",
+      "size": "Mediano",
       "temperament": "Amigable"
     },
     "extraInfo": {
@@ -467,7 +467,7 @@ const petsData = [
       },
       "gender": "Hembra",
       "breed": "Persa",
-      "size": "Pequeña",
+      "size": "Pequeño",
       "temperament": "Dulce"
     },
     "extraInfo": {
@@ -509,7 +509,7 @@ const petsData = [
       },
       "gender": "Hembra",
       "breed": "Ragdoll",
-      "size": "Pequeña",
+      "size": "Pequeño",
       "temperament": "Juguetona"
     },
     "extraInfo": {
