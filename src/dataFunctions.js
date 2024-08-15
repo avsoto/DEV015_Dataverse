@@ -27,20 +27,23 @@ const dataFunctions = {
   filterDataByAge: (petsData,filterBy, minValue, maxValue) => {
     return petsData.filter(pet => {
       const { years, months } = pet.facts[filterBy];
-      // Convertir la edad total a meses
+      
+      // Convertir la edad total a meses //
+      
       const totalMonths = (years * 12) + months;
 
       return totalMonths >= minValue && totalMonths <= maxValue;
     })
+ 
   },
 
-  //Filtro Género y Tamaño//
+  // Filtro Género y Tamaño //
 
   filterDataByValue: (petsData,filterBy,value)=> {
     return petsData.filter(petFilteredBy => petFilteredBy.facts[filterBy] === value)
   },
 
-  //Ordenamientos//
+  // Ordenamientos //
 
   orderPetsBy: (petsData, sortBy, sortOrder)=> {
     return petsData.sort((a, z) => {
