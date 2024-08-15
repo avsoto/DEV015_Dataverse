@@ -192,7 +192,7 @@ botonOrdenarDesc.addEventListener("click", function(){
   root.appendChild(renderItems(ordenarPetsData))
 })
 
-// Botón de Estadísticas //
+// Botón Estadísticas //
 
 const btnStats = document.querySelector('#btn-estadísticas');
 const sectionStats = document.querySelector('.estadisticas-section');
