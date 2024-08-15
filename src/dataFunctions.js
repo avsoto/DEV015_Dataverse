@@ -25,16 +25,19 @@ const dataFunctions = {
   // Filtro Edad //
 
   filterDataByAge: (petsData,filterBy, minValue, maxValue) => {
-    return petsData.filter(pet => {
+    const petsWithAgeInMonths = petsData.map(pet => {
       const { years, months } = pet.facts[filterBy];
-      
-      // Convertir la edad total a meses //
-      
       const totalMonths = (years * 12) + months;
+      return {
+        name:pet.name, type:pet.type, shortDescription:pet.shortDescription, description:pet.description, imageUrl:pet.imageUrl, facts:pet.facts, age:pet.age, gender:pet.gender, breed:pet.breed, size:pet.size, temperament:pet.temperament,
+        totalMonths
+      };
+    });
 
-      return totalMonths >= minValue && totalMonths <= maxValue;
-    })
- 
+    return petsWithAgeInMonths.filter(pet =>
+      pet.totalMonths >= minValue && pet.totalMonths <= maxValue
+    );
+
   },
 
   // Filtro Género y Tamaño //
@@ -55,6 +58,18 @@ const dataFunctions = {
       }
     });
 
+  },
+
+  countAdoptedPets: (petsData) => {
+    return petsData.reduce((acumulador,pet)=> {
+      if (pet.adopted) {
+        return acumulador+1
+      }
+
+      else {
+        return acumulador
+      }
+    },0)
   },
 
 }

@@ -930,4 +930,38 @@ select[name='elegir'] {
   margin: 10px 40px 0 40px;
 }
 
+.estadisticas-section {
+  width: 70%;
+  height: 150px;
+  display: none;
+  margin: 2em 12em 0 12em;
+  border-radius: 10px;
+  background: #7BE950;
+  z-index: 30;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.estadisticas-section.active {
+  position: fixed;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  transition: .4s
+}
+
+.btn-close2 {
+  margin-top: 10px;
+}
+
+.estadisticas-section .fa-xmark {
+  color: #000000;
+  font-size: 1.2em;
+  margin: 50px 10px 0 0;
+  display: flex;
+  justify-content: right;
+  cursor: pointer;
+}
+
 }

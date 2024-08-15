@@ -2,7 +2,7 @@ import { renderItems } from './view.js';
 import dataFunctions from './dataFunctions.js';
 import petsData from './data/dataset.js';
 
-const { showPets, filterDataByType, filterDataByAge, filterDataByValue, orderPetsBy } = dataFunctions;
+const { showPets, filterDataByType, filterDataByAge, filterDataByValue, orderPetsBy, countAdoptedPets } = dataFunctions;
 
 //------------------ Botones principales ------------------//
 
@@ -22,6 +22,7 @@ window.onload=function(){
   btnCloseIcon.onclick = function(){
     dropDownMenu.classList.remove('active')
   }
+  
 }
 
 
@@ -191,8 +192,20 @@ botonOrdenarDesc.addEventListener("click", function(){
   root.appendChild(renderItems(ordenarPetsData))
 })
 
+// Botón de Estadísticas //
 
+const btnStats = document.querySelector('#btn-estadísticas');
+const sectionStats = document.querySelector('.estadisticas-section');
+const btncloseStats = document.querySelector('.btn-close2 li i');
+const adoptedPets = document.querySelector('.adoptados');
 
+btnStats.addEventListener('click', () => {
+  sectionStats.style.display = 'block';
+  const adoptedResult = countAdoptedPets(petsData)
+  adoptedPets.innerHTML = `Número de mascotas adoptadas: ${adoptedResult}`;
+});
 
-
+btncloseStats.addEventListener('click', () => {
+  sectionStats.style.display = 'none';
+});
 
