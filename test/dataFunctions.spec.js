@@ -140,8 +140,4 @@ describe('orderPetsBy', () => {
     expect(orderby).toEqual(expected);
 
   })
-<<<<<<< HEAD
 })
-=======
-})
->>>>>>> jas-repo/feat/tests
