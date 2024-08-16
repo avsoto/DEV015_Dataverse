@@ -74,7 +74,7 @@ li {
   background: #ffffff;
   left: -300px;
   transition: left 0.4s ease;
-  z-index: 20;
+  z-index: 1600;
 }
 
 /* Activar Sidebar */
@@ -87,23 +87,24 @@ li {
   transition: .4s
 }
 
-#sidebar ul li {
+.sidebar ul li {
   padding-top: 0.5em;
   color: #222222;
   font-size: 100%;
   font-weight: 400;
   margin: 10%;
+  line-height: 0.5em;
 }
 
-#sidebar ul {
+.sidebar ul {
   margin-top: 2em;
 }
 
-#sidebar .fa-xmark {
+.sidebar .fa-xmark {
   font-size: 1.5em;
   position: absolute;
   top: 20px; /* Añadido para posicionar el icono de cerrar */
-  right: 30px;
+  right: 70px;
   cursor: pointer;
 }
 
@@ -507,6 +508,45 @@ footer h3{
   cursor: pointer;
 }
 
+.estadisticas-section {
+  width: 70%;
+  height: 150px;
+  display: none;
+  margin: 2em 9em 0 9em;
+  border-radius: 10px;
+  background: rgba(255, 255, 31, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 247, 0, 0.552);
+  z-index: 30;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.estadisticas-section.active {
+  position: fixed;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  transition: .4s
+}
+
+.btn-close2 {
+  margin-top: 10px;
+}
+
+.estadisticas-section .fa-xmark {
+  color: #000000;
+  font-size: 1.2em;
+  margin: 50px 10px 0 0;
+  display: flex;
+  justify-content: right;
+  cursor: pointer;
+}
+
 /* --------------------- Desktop Design ------------------------- */
 
 dd {
@@ -580,7 +620,7 @@ li {
   background: #ffffff;
   left: -300px;
   transition: left 0.4s ease;
-  z-index: 20;
+  z-index: 100;
 }
 
 /* Activar Sidebar */
@@ -936,7 +976,12 @@ select[name='elegir'] {
   display: none;
   margin: 2em 12em 0 12em;
   border-radius: 10px;
-  background: #7BE950;
+  background: rgba(255, 255, 31, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 247, 0, 0.552);
   z-index: 30;
   align-items: center;
   text-align: center;

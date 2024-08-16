@@ -81,8 +81,8 @@
         <ul class="opciones-mascota">
           <li class="boton-filtros"><i class="fa-solid fa-bars" id="bars-2"></i>Filtros</li>
             <label id="orden"> Ordenar por:
-                <input id="asc" type="radio" name="sort-order" value="asc" ><i class="fa-solid fa-arrow-down-a-z" style="color: #ed8a0a;"></i>
-                <input id="desc" type="radio" name="sort-order" value="desc"><i class="fa-solid fa-arrow-up-a-z" style="color: #ed8a0a;"></i>
+                <input id="asc" type="radio" name="sort-order" value="asc" data-testid="select-sort"><i class="fa-solid fa-arrow-down-a-z" style="color: #ed8a0a;"></i>
+                <input id="desc" type="radio" name="sort-order" value="desc" data-testid="select-sort"><i class="fa-solid fa-arrow-up-a-z" style="color: #ed8a0a;"></i>
             </label>
             <button id="btn-estadísticas">Estadísticas</button>
         </ul>
@@ -97,7 +97,7 @@
           </select>
 
           <label for="edad"></label>
-          <select id="edad" name="elegir">
+          <select id="edad" name="elegir" data-testid="select-filter">
             <option value="Edad" disabled selected hidden>Edad</option>
             <option value="Cachorro">Cachorro</option>
             <option value="Adulto">Adulto</option>
@@ -105,14 +105,14 @@
           </select>
 
           <label for="genero"></label>
-          <select id="genero" name="elegir">
+          <select id="genero" name="elegir" data-testid="select-filter">
             <option value="Genero" disabled selected hidden>Género</option>
             <option value="Macho">Macho</option>
             <option value="Hembra">Hembra</option>
           </select>
 
           <label for="tamaño"></label>
-          <select id="tamaño" name="elegir">
+          <select id="tamaño" name="elegir" data-testid="select-filter">
             <option value="Tamaño" disabled selected hidden>Tamaño</option>
             <option value="Pequeño">Pequeño</option>
             <option value="Mediano">Mediano</option>
@@ -120,7 +120,7 @@
           </select>
 
           <div>
-          <button id="btn-limpiar">Limpiar</button>
+          <button id="btn-limpiar" data-testid="button-clear">Limpiar</button>
           </div>
         </div>
       <section class="mascotas-tarjetas">
@@ -128,6 +128,7 @@
         <div class="btn-close2">
           <li><i class="fa-solid fa-xmark"></i></li>
           <p class="adoptados"></p>
+          <div class="graphics"></div>
         </div>
         </div>
         <h2 class="nuestras-mascotas">
@@ -152,10 +153,6 @@
 
   </main>
 
-  <script src="main.js" type="module"></script>
-</body>
-
-
   <footer class="footer">
     <div class="column">
       <a href="#">HOME</a>
@@ -178,5 +175,9 @@
 
   </footer>
 
+  <script src="main.js" type="module"></script>
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
 
+  </body>
+  
 </html>

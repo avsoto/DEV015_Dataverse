@@ -80,6 +80,7 @@ describe('orderPetsBy', () => {
         "shortDescription": "Cachorra dulce y juguetona, busca hogar.",
         "description": "Bella es una cachorra pequeña con pelaje marrón claro, ella fue rescatada de la calle. Es muy dulce y juguetona, ideal para una familia que busque una hermosa compañera llena de energía y amor. Bella está lista para un hogar donde pueda recibir cuidados y atención, donde pueda crecer en un ambiente amoroso. Su naturaleza cariñosa y su tamaño pequeño la hacen perfecta para familias con niños y para quienes buscan una mascota adorable y activa pero sobre todo que brinde alegría a sus días.",
         "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%2010.jpeg?alt=media&token=52d3b183-a9de-47c4-8a1e-825146ef540f",
+        "adopted": true,
         "facts": {
           "age": {
             "years": 0,
@@ -101,6 +102,7 @@ describe('orderPetsBy', () => {
         "shortDescription": "Perro perdido, busca a su dueño.",
         "description": "Max es un perro mediano con pelaje dorado que se perdió en un vecindario. Busca desesperadamente a su dueño. Es un perro activo y cariñoso que disfruta correr y jugar. Mientras tanto, Max está buscando un hogar temporal donde pueda recibir la atención y cuidados necesarios. Max es un compañero leal y afectuoso, ideal para quienes pueden ofrecerle un espacio seguro y mucho amor hasta que se reúna con su familia. Su carácter enérgico y su necesidad de compañía hacen que necesite un hogar activo.",
         "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%205.jpeg?alt=media&token=72a5d14c-e61d-4b6c-859d-c423b3c1d8c4",
+        "adopted": false,
         "facts": {
           "age": {
             "years": 2,
@@ -122,6 +124,7 @@ describe('orderPetsBy', () => {
         "shortDescription": "Perro grande y amistoso, abandonado en el parque.",
         "description": "Rex es un perro grande con pelaje marrón y ojos alegres. Abandonado en el parque local, Rex busca una nueva familia que le brinde el amor y la atención que merece. Es un perro muy enérgico que disfruta jugar con pelotas y correr en el jardín. Ideal para quienes disfrutan de actividades al aire libre y buscan un compañero leal. Rex necesita mucho ejercicio y atención, por lo que es perfecto para familias activas que puedan ofrecerle el espacio y cariño necesarios para que se desarrolle felizmente.",
         "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%201.jpeg?alt=media&token=0aa405af-4449-48f1-95dc-f3326dd5325f",
+        "adopted": true,
         "facts": {
           "age": {
             "years": 9,
@@ -141,3 +144,10 @@ describe('orderPetsBy', () => {
 
   })
 })
+
+describe('countAdoptedPets', () => {
+  it('returns `countAdoptedPets` ', () => {
+    const adoptados = dataFunctions.countAdoptedPets(data)
+    expect(adoptados).toBe(3);
+  });
+});

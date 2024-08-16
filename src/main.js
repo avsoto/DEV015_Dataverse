@@ -202,7 +202,8 @@ const adoptedPets = document.querySelector('.adoptados');
 btnStats.addEventListener('click', () => {
   sectionStats.style.display = 'block';
   const adoptedResult = countAdoptedPets(petsData)
-  adoptedPets.innerHTML = `Número de mascotas adoptadas: ${adoptedResult}`;
+  adoptedPets.innerHTML = `Número de mascotas adoptadas: ${adoptedResult}`;  
+   
 });
 
 btncloseStats.addEventListener('click', () => {
