@@ -46,7 +46,7 @@ const dataFunctions = {
     return petsData.filter(petFilteredBy => petFilteredBy.facts[filterBy] === value)
   },
 
-  // Ordenamientos //
+  //------------------ Filtro de Ordenamiento ------------------//
 
   orderPetsBy: (petsData, sortBy, sortOrder)=> {
     return petsData.sort((a, z) => {
@@ -59,6 +59,8 @@ const dataFunctions = {
     });
 
   },
+
+  //------------------ Estadísticas ------------------//
 
   countAdoptedPets: (petsData) => {
     return petsData.reduce((acumulador,pet)=> {
@@ -73,8 +75,6 @@ const dataFunctions = {
   },
 
 }
-
-
 
 export default dataFunctions;
 
