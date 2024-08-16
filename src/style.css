@@ -121,14 +121,14 @@ li {
 }
 
 .izquierda {
-    width: 70%;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    margin-top: 8rem;
-    margin-left: 6.5em;
-    text-align: center;
-    z-index: 19;
+  width: 70%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+  margin-left: 6.5em;
+  text-align: center;
+  z-index: 19;
 }
 
 .vector {
@@ -141,20 +141,19 @@ li {
 }
 
 .img-banner {
-    z-index: 19;
-    width: auto;
-    height: 250px;
-    margin-right: 90px;
-    margin-top: -5px;
+  z-index: 19;
+  width: auto;
+  height: 250px;
+  margin-right: 90px;
+  margin-top: -5px;
 }
 
 .derecha {
-    width: 50%;
-    height: 500px;
-    text-align: center;
-    z-index: 19;
-    margin-left: 3em;
-    margin-top: -180px;
+  width: 50%;
+  height: 500px;
+  text-align: center;
+  z-index: 19;
+  margin-top: -180px;
 }
 
 .texto {
@@ -169,18 +168,17 @@ li {
     color: #0A5C1B;
     line-height: 70px;
     margin-bottom: 3.5rem;
+    text-align: center;
 }
 
 .texto h2, .texto p {
     font-family: "Josefin Sans";
     color: #272523;
     margin-bottom: 0.9em;
-    font-size: 2em;
 }
 
 .texto p {
     margin-left: 0px;
-    font-size: 1.5em;
 }
 
 .texto h2 {
@@ -229,7 +227,6 @@ li {
   justify-content: space-around;
   gap: 1rem;
   align-items: center;
-  font-size: 1.8em;
 }
 
 .opciones-mascota div, .opciones-mascota label{
@@ -271,7 +268,7 @@ select[name='ordenar'] {
 
 #btn-limpiar {
   background-color: #f3ce00;
-  margin: 50px 0px 0px 0px;
+  margin: 20px 0px 0px 0px;
   border-radius: 2em;
   border: none;
   padding-top: 0.4em;
@@ -281,7 +278,7 @@ select[name='ordenar'] {
   color:#ffffff;
   text-align: center;
   font-family: 'Josefin Sans';
-  font-size: 1.3em;
+  font-size: 1em;
 }
 
 #btn-limpiar:hover {
@@ -310,7 +307,6 @@ select[name='elegir'] {
   color:#ffffff;
   text-align: center;
   font-family: 'Josefin Sans';
-  font-size: 1.3em;
 }
 
 .mascotas-filtros {
@@ -333,7 +329,7 @@ select[name='elegir'] {
   font-family: "Cherry Bomb One";
   font-size: 3.5em;
   font-weight: 400;
-  margin-top: 1.2em;
+  margin-top: 1em;
   margin-bottom: 1.4em;
   color: #4C1271;
   line-height: 60px;
@@ -348,8 +344,8 @@ select[name='elegir'] {
 .huesos1{
   width: auto;
   text-align: center;
-  margin-left: 130px;
-  margin-top: -200px;
+  margin-left: 50px;
+  margin-top: -70px;
 }
 
 .huesos2{
@@ -390,7 +386,7 @@ select[name='elegir'] {
 
 
 #root {
-  margin-top: 210px;
+  margin-top: 130px;
 }
 
 .ul-tarjeta{
@@ -452,11 +448,11 @@ div .description {
 footer{
   z-index: 550;
   background: #FFB700;
-  height: 300px;
+  height: 200px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  vertical-align: middle;
 }
 
 footer .column {
@@ -480,14 +476,14 @@ footer .center-column {
 }
 
 footer a{
-  font-size: 1.4em;
   text-decoration: none;
   color: white;
   margin-bottom: 0.7em;
+  font-size: 0.7em;
 }
 
 footer h3{
-  font-size: 3em;
+  font-size: 1.5em;
   font-family: 'Cherry Bomb One';
   color: #87500D;
   margin-bottom: 0.3em;
@@ -503,7 +499,7 @@ footer h3{
 }
 
 .icon i{
-  font-size: 2em;
+  font-size: 1.3em;
   color: white;
   cursor: pointer;
 }
@@ -766,7 +762,6 @@ li {
   gap: 1rem;
   align-items: center;
   margin: 0 8px 0 8px;
-  font-size: 1.6em;
 }
 
 #bars-2 {
