@@ -507,7 +507,7 @@ footer h3{
 .estadisticas-section {
   height: 150px;
   display: none;
-  margin: 2em;
+  margin: 2em 9em 0 9em;
   border-radius: 10px;
   background: rgba(255, 255, 31, 0.4);
   border-radius: 16px;
