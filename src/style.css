@@ -207,7 +207,7 @@ li {
 .mascotas-container {
   width: 100%;
   height: auto;
-  padding-bottom: 20em;
+  padding-bottom: 15em;
   background-color: #C08AF3;
   box-shadow: rgba(0, 0, 0, 0.25);
 }
@@ -344,15 +344,15 @@ select[name='elegir'] {
 .huesos1{
   width: auto;
   text-align: center;
-  margin-left: 50px;
+  margin-left: 65px;
   margin-top: -70px;
 }
 
 .huesos2{
   width: auto;
   text-align: center;
-  margin-left: 130px;
-  margin-top: -150px;
+  margin-left: 65px;
+  margin-top: -70px;
 }
 
 .img-hueso1 {
@@ -890,13 +890,15 @@ select[name='elegir'] {
 
 .huesos1{
   text-align: center;
-  margin-left: 120px;
+  margin-left: 190px;
   margin-top: -200px;
 }
 
 .huesos2{
   text-align: center;
-  margin-left: 120px;
+  margin-left: 190px;
+  margin-top: -230px;
+  margin-bottom: 200px;
 }
 
 .img-hueso1 {
