@@ -2,11 +2,7 @@ import { renderItems } from './view.js';
 import dataFunctions from './dataFunctions.js';
 import petsData from './data/dataset.js';
 
-<<<<<<< HEAD
-const { showPets, filterDataByType, filterDataByAge, filterDataByValue, orderPetsBy, countAdoptedDogs } = dataFunctions;
-=======
 const { showPets, filterDataByType, filterDataByAge, filterDataByValue, orderPetsBy, countAdoptedPets } = dataFunctions;
->>>>>>> jas-repo/develop
 
 //------------------ Botones principales ------------------//
 
@@ -26,7 +22,7 @@ window.onload=function(){
   btnCloseIcon.onclick = function(){
     dropDownMenu.classList.remove('active')
   }
-  
+
 }
 
 
@@ -207,23 +203,10 @@ const adoptedPets = document.querySelector('.adoptados');
 btnStats.addEventListener('click', () => {
   sectionStats.style.display = 'block';
   const adoptedResult = countAdoptedPets(petsData)
-  adoptedPets.innerHTML = `Número de mascotas adoptadas: ${adoptedResult}`;  
-   
+  adoptedPets.innerHTML = `Número de mascotas adoptadas: ${adoptedResult}`;
+
 });
 
 btncloseStats.addEventListener('click', () => {
   sectionStats.style.display = 'none';
 });
-
-
-const botonEstadistica = document.querySelector('#btn-estadísticas');
-const numeroAdoptados = document.querySelector('.numeroAdoptados');
-botonEstadistica.addEventListener('click', () => {
-
-  const numAdoptados = countAdoptedDogs(petsData);
-  console.log(numAdoptados); // Verifica que la función devuelve el número correcto
-  numeroAdoptados.innerHTML = `Número de perros adoptados: ${numAdoptados}`;
-
-
-
-})
