@@ -29,6 +29,7 @@ const petsData = [
     "shortDescription": "Perra pequeña y cariñosa abandonada en la calle.",
     "description": "Samantha es una perra pequeña con pelaje blanco y negro, encontrada en la calle. A pesar de su situación, es dulce y cariñosa, ideal para una familia que busque una compañera leal y afectuosa. Samantha es muy adaptable y le encanta estar cerca de las personas. Está buscando un hogar donde pueda recibir el cariño y cuidado que merece. Su tamaño pequeño la hace ideal para apartamentos o casas con menos espacio, donde pueda sentirse completamente segura y muy amada.",
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%202.jpeg?alt=media&token=17af3603-6078-4bb2-a72b-7220951c8891",
+    "adoptado": true,
     "facts": {
       "age": {
         "years": 2,
@@ -50,6 +51,7 @@ const petsData = [
     "shortDescription": "Perro mediano, abandonado en un refugio.",
     "description": "Rocky es un perro mediano con pelaje gris que fue dejado en un refugio. Busca una familia amorosa que pueda ofrecerle cariño y atención. Es leal y juguetón, ideal para un hogar que pueda brindarle mucha interacción y espacio para jugar. Rocky se lleva bien con otros perros y necesita un ambiente activo donde pueda canalizar su energía. Su carácter amable y su afecto hacia las personas lo convierten en un excelente compañero para cualquier familia dispuesta a ofrecerle un hogar.",
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%203.jpeg?alt=media&token=bc7bd01a-c48b-4e7b-a062-f6f15dab803d",
+    "adoptado": true,
     "facts": {
       "age": {
         "years": 16,
@@ -182,7 +184,7 @@ const petsData = [
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/almacenamiento-jas.appspot.com/o/Perros%2Fperro%209.jpeg?alt=media&token=8aa552bd-b70e-4d49-9214-5b0c28e7aa62",
     "facts": {
       "age": {
-        "years": 4,
+        "years": 0,
         "months": 2
       },
       "gender": "Macho",

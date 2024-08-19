@@ -22,7 +22,7 @@ export const data = [
     },
     "extraInfo": {
       "curiosities": "Le encanta nadar en el lago."
-    }
+    },
   },
   {
     "id": "perro-perdido-001",
@@ -131,4 +131,3 @@ export const data = [
     }
   },
 ];
-  

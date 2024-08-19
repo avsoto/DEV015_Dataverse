@@ -2,7 +2,7 @@ import { renderItems } from './view.js';
 import dataFunctions from './dataFunctions.js';
 import petsData from './data/dataset.js';
 
-const { showPets, filterDataByType, filterDataByAge, filterDataByValue, orderPetsBy } = dataFunctions;
+const { showPets, filterDataByType, filterDataByAge, filterDataByValue, orderPetsBy, countAdoptedDogs } = dataFunctions;
 
 //------------------ Botones principales ------------------//
 
@@ -53,6 +53,7 @@ document.querySelector('.boton-filtros').addEventListener('click', function () {
 document.addEventListener('DOMContentLoaded', () => {
   const pets = showPets();
   root.appendChild( renderItems(pets));
+
 })
 
 
@@ -192,3 +193,15 @@ botonOrdenarDesc.addEventListener("click", function(){
 })
 
 
+
+const botonEstadistica = document.querySelector('#btn-estadísticas');
+const numeroAdoptados = document.querySelector('.numeroAdoptados');
+botonEstadistica.addEventListener('click', () => {
+
+  const numAdoptados = countAdoptedDogs(petsData);
+  console.log(numAdoptados); // Verifica que la función devuelve el número correcto
+  numeroAdoptados.innerHTML = `Número de perros adoptados: ${numAdoptados}`;
+
+
+
+})
