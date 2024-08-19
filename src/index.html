@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Dataverse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -81,8 +82,8 @@
         <ul class="opciones-mascota">
           <li class="boton-filtros"><i class="fa-solid fa-bars" id="bars-2"></i>Filtros</li>
             <label id="orden"> Ordenar por:
-                <input id="asc" type="radio" name="sort-order" value="asc" ><i class="fa-solid fa-arrow-down-a-z" style="color: #ed8a0a;"></i>
-                <input id="desc" type="radio" name="sort-order" value="desc"><i class="fa-solid fa-arrow-up-a-z" style="color: #ed8a0a;"></i>
+                <input id="asc" type="radio" name="sort-order" value="asc" data-testid="select-sort"><i class="fa-solid fa-arrow-down-a-z" style="color: #ed8a0a;"></i>
+                <input id="desc" type="radio" name="sort-order" value="desc" data-testid="select-sort"><i class="fa-solid fa-arrow-up-a-z" style="color: #ed8a0a;"></i>
             </label>
             <button id="btn-estadísticas">Estadísticas</button>
         </ul>
@@ -120,10 +121,17 @@
           </select>
 
           <div>
-          <button id="btn-limpiar">Limpiar</button>
+          <button id="btn-limpiar" data-testid="button-clear">Limpiar</button>
           </div>
         </div>
       <section class="mascotas-tarjetas">
+        <div class="estadisticas-section">
+        <div class="btn-close2">
+          <li><i class="fa-solid fa-xmark"></i></li>
+          <p class="adoptados"></p>
+          <div class="graphics"></div>
+        </div>
+        </div>
         <h2 class="nuestras-mascotas">
           <span>Nuestras</span>
           <span class="titulo-secundario">mascotas</span>
@@ -147,10 +155,6 @@
 
   </main>
 
-  <script src="main.js" type="module"></script>
-</body>
-
-
   <footer class="footer">
     <div class="column">
       <a href="#">HOME</a>
@@ -160,7 +164,7 @@
     </div>
     <div class="center-column">
       <h3>Salva una vida</h3>
-      <img src="/src/assets/Logo.svg">
+      <img src="./assets/Logo.svg">
       <a class="name">JASMIN VIDAL - ANA SOTO 2024</a>
     </div>
     <div class="column">
@@ -173,5 +177,9 @@
 
   </footer>
 
+  <script src="main.js" type="module"></script>
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
 
+  </body>
+  
 </html>

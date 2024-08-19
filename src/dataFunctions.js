@@ -29,7 +29,7 @@ const dataFunctions = {
       const { years, months } = pet.facts[filterBy];
       const totalMonths = (years * 12) + months;
       return {
-        ...pet,
+        name:pet.name, type:pet.type, shortDescription:pet.shortDescription, description:pet.description, imageUrl:pet.imageUrl, facts:pet.facts, age:pet.age, gender:pet.gender, breed:pet.breed, size:pet.size, temperament:pet.temperament,
         totalMonths
       };
     });
@@ -46,7 +46,7 @@ const dataFunctions = {
     return petsData.filter(petFilteredBy => petFilteredBy.facts[filterBy] === value)
   },
 
-  // Ordenamientos //
+  //------------------ Filtro de Ordenamiento ------------------//
 
   orderPetsBy: (petsData, sortBy, sortOrder)=> {
     return petsData.sort((a, z) => {
@@ -60,19 +60,20 @@ const dataFunctions = {
 
   },
 
+  //------------------ Estadísticas ------------------//
 
-  // Estadística //
-  countAdoptedDogs: (petsData)=> {
-    return petsData.reduce((acumulador, pet) => {
-      if(pet.adoptado){
-        return acumulador +1;
+  countAdoptedPets: (petsData) => {
+    return petsData.reduce((acumulador,pet)=> {
+      if (pet.adopted) {
+        return acumulador+1
       }
 
       else {
-        return acumulador;
+        return acumulador
       }
-    }, 0);
+    },0)
   },
+
 }
 
 export default dataFunctions;
