@@ -2,7 +2,7 @@ import { renderItems } from './view.js';
 import dataFunctions from './dataFunctions.js';
 import petsData from './data/dataset.js';
 
-const { showPets, filterDataByType, filterDataByAge, filterDataByValue, orderPetsBy, countAdoptedPets } = dataFunctions;
+const { showPets, filterDataByType, filterDataByAge, filterDataByValue, orderPetsBy, countAdoptedPets} = dataFunctions;
 
 //------------------ Botones principales ------------------//
 
